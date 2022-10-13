@@ -1,0 +1,5 @@
+# ignore data files
+.json
+
+# ignore config files
+.config
