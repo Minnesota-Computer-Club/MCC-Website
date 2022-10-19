@@ -1,0 +1,221 @@
+
+
+/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1342px) {
+    .about .about_img {
+        margin-left: -53px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .text-bg h1 {
+        font-size: 76px;
+        line-height: 72px;
+        letter-spacing: 60px;
+    }
+    .we_do .we_box h3 {
+        font-size: 19px;
+        line-height: 25px;
+    }
+    .main_form {
+        margin-top: 39px;
+    }
+    ul.location_icon li a {
+        padding-right: 13px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navigation.navbar-dark .navbar-nav .nav-link {
+        padding: 0px 9px;
+    }
+    .text-bg h1 {
+        font-size: 58px;
+        letter-spacing: 43px;
+        line-height: 44px;
+    }
+    .text-bg span {
+        font-size: 46px;
+        letter-spacing: 56px;
+    }
+    .software .titlepage p {
+        font-size: 17px;
+        line-height: 31px;
+        margin-top: 16px;
+        padding: 20px 20px;
+    }
+    ul.social_team li a {
+        margin: 0 9px;
+    }
+    .main_form {
+        margin-top: 47px;
+    }
+    .footer h3 {
+        font-size: 35px;
+    }
+    ul.location_icon li {
+        padding: 9px 0px;
+       font-size: 15px;
+    }
+    ul.social_icon li a {
+        width: 41px;
+        font-size: 22px;
+        height: 41px;
+    }
+    .footer p {
+        padding-right: 21px;
+        font-size: 15px;
+    }
+    .news_form .letter_form {
+        width: 100%;
+    }
+    .news_form .sumbit {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .we_do .we_box h3 {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .we_do .we_box p {
+        font-size: 13px;
+        line-height: 26px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .text-bg h1 {
+        font-size: 48px;
+        letter-spacing: 35px;
+        line-height: 51px;
+    }
+    .text-bg span {
+        font-size: 41px;
+        letter-spacing: 46px;
+    }
+    .titlepage h2 {
+        font-size: 31px;
+    }
+    .software .titlepage h2 {
+        padding-top: 50px;
+    }
+    .software .read_more {
+        margin-bottom: 30px;
+    }
+    .social_box {
+        margin-top: -67px !important;
+        max-width: 308px;
+        margin: 0 auto;
+    }
+    .testimonial_box {
+        margin: 120px 0px 27px 0px;
+        padding: 40px 0px 40px 8px;
+    }
+    .testimonial_box,
+    .testimonial_box figure,
+    .testimonial_box h3,
+    .testimonial_box p,
+    .testimonial_box i img {
+        transform: skew(0deg);
+    }
+    .footer h3 {
+        padding-top: 20px;
+    }
+    .padding_right2 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .map_section {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding: 30px 0px 15px 0px;
+    }
+    .logo {
+        border: inherit;
+        float: left;
+        margin-top: 0px !important;
+    }
+    .banner_main {
+        padding: 249px 0px 0px 0px;
+        min-height: 750px;
+    }
+    .text-bg h1 {
+        font-size: 36px;
+        letter-spacing: 12px;
+        padding-bottom: 20px;
+        line-height: 32px;
+    }
+    .text-bg span {
+        font-size: 29px;
+        letter-spacing: 26px;
+        line-height: 30px;
+    }
+    .titlepage h2 {
+        font-size: 28px;
+    }
+    .about .about_img {
+        margin-left: 0px;
+    }
+    .software .software_img figure img {
+        height: 360px;
+    }
+    .software .titlepage h2 {
+        padding-top: 50px;
+    }
+    .software .read_more {
+        margin-bottom: 30px;
+    }
+    .we_do .we_box p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .social_box {
+        margin-top: -67px !important;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    .testimonial_box {
+        margin: 120px 0px 27px 0px;
+        padding: 40px 0px 40px 8px;
+    }
+    .testimonial_box p {
+        font-size: 15px;
+        padding: 11px 9px;
+        line-height: 30px;
+    }
+    .testimonial_box,
+    .testimonial_box figure,
+    .testimonial_box h3,
+    .testimonial_box p,
+    .testimonial_box i img {
+        transform: skew(0deg);
+    }
+    .footer h3 {
+        padding-top: 20px;
+    }
+    .padding_right2 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .map_section {
+        margin-top: 30px;
+    }
+    ul.location_icon li {
+        font-size: 16px;
+    }
+    .d_none {
+        display: none;
+    }
+    .right_bottun {
+        margin-top: -105px;
+    }
+}
+
