@@ -1,6 +1,9 @@
 # ignore data files
 .json
 
+# ignore mac stupidity
+.DS_Store
+
 # ignore config files
 .config
 
