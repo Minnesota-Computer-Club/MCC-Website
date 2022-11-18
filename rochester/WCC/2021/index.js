@@ -7,8 +7,8 @@ const STAR = "★";
 const FORMAT = "%PLACE) %SCORE %STARS %NAME (%SCHOOL)";
 const PATHTOINDIVIDUALDATA =
   "/var/www/private/AOC/2021/rochester_data_file.json";
-const PATHTOTEAMS = "/var/www/private/AOC/2021/rochester_team_file.json";
-const PATHTOCSV = "/var/www/private/AOC/2021/rochester_users.json";
+const PATHTOTEAMS = "/var/www/private/WCC/2021/rochester_team_file.json";
+const PATHTOCSV = "/var/www/private/WCC/2021/rochester_users.json";
 const SCHOOLTOCOLOR = {
   mayo: "1a743a",
   jm: "cb2026",
