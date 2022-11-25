@@ -133,13 +133,13 @@ export default function leaderboard({ AOC, form }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
-                    <table className={styles.schools}>
+                    <table>
                         <tbody>{renderSchools()}</tbody>
                     </table>
                 </div>
                 <div className={styles.section}>
                     <h2>Individuals</h2>
-                    <table className={styles.indviduals}>
+                    <table>
                         <tbody>{renderIndividuals()}</tbody>
                     </table>
                 </div>

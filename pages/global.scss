@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Source Code Pro', monospace;
+body,
+p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: #0f0f23;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: #0f0f23;
+    }
 }
