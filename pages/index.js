@@ -2,8 +2,6 @@ import styles from './index.module.scss'
 import Link from 'next/link';
 
 export default function Index() {
-  const router = useRouter()
-
   return (
     <div className={styles.index}>
       <h1>Minnesota Computer Club</h1>
