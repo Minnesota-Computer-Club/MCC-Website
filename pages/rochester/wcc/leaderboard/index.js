@@ -4,10 +4,38 @@ import styles from './leaderboard.module.scss';
 export default function leaderboard({ AOC, form }) {
     const MAX_STARS = 25;
     const STAR = '★';
+    const SCHOOLTOCOLOR = {
+        mayo: '1a743a',
+        jm: 'cb2026',
+        century: 'ff9ff3',
+        lincoln: '64bbed',
+        ctech: 'ffc01f',
+        kellogg: '0d78bb',
+    };
     /*
-    useEffect(async () => {
 
-    }, []);*/
+    Color mixing functions
+
+    */
+
+    function hexToRGB(hex) {
+        let aRgbHex = hex.match(/.{1,2}/g);
+        let aRgb = [parseInt(aRgbHex[0], 16), parseInt(aRgbHex[1], 16), parseInt(aRgbHex[2], 16)];
+        return aRgb;
+    }
+
+    function mixRGB(rgbs) {
+        //sum of all ratios must add up to 1
+        let r = 0;
+        let g = 0;
+        let b = 0;
+        for (let [red, green, blue, ratio] of rgbs) {
+            r += red * ratio;
+            g += green * ratio;
+            b += blue * ratio;
+        }
+        return [r, g, b];
+    }
 
     function generateStars(starCount) {
         let goldStars = Math.floor(starCount / 2);
@@ -24,7 +52,10 @@ export default function leaderboard({ AOC, form }) {
 
     function renderSchools() {
         let schoolData = {};
-        for (let AOCUser of Object.values(AOC.members)) {
+        let teams = {};
+        let aocMembers = Object.values(AOC.members);
+        aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
+        for (let AOCUser of aocMembers) {
             let formUser = form[AOCUser.name];
             if (!formUser) continue;
             let { ['Which school do you attend?']: school } = formUser;
@@ -84,6 +115,87 @@ export default function leaderboard({ AOC, form }) {
         return elements;
     }
 
+    function renderTeams() {
+        let elements = [];
+        let teams = {};
+        let aocMembers = Object.values(AOC.members);
+        aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
+        for (let AOCUser of aocMembers) {
+            let formUser = form[AOCUser.name];
+            if (!formUser) continue;
+            let {
+                ['What is your first and last name?']: name,
+                ['Which school do you attend?']: school,
+                ['Are you participating as part of a team or as an individual?']: team,
+                ['What is your team name? (Make sure all your team members use the same team name!)']:
+                    teamName,
+                ['If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.']:
+                    discord,
+                ['Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)']:
+                    language,
+                ['What is your Advent of Code Username? (Make sure you are logged in to see it!)']:
+                    username,
+            } = formUser;
+            if (team != 'Team') continue;
+            let { local_score: score, stars } = AOCUser;
+            if (!teams[teamName]) teams[teamName] = [];
+            teams[teamName].push({
+                name,
+                school,
+                discord,
+                language,
+                username,
+                score,
+                stars,
+            });
+        }
+        for (let [teamName, members] of Object.entries(teams)) {
+            let schools = [];
+            let colors = [];
+            let ratio = 1 / members.length;
+            for (let { school } of members) {
+                schools.push(school.charAt(0));
+                colors.push([...hexToRGB(SCHOOLTOCOLOR[school.toLowerCase()]), ratio]);
+            }
+            schools = schools.join('/');
+            let color = mixRGB(colors);
+            let rank = elements.length + 1;
+            let { score, stars } = members[0];
+            elements.push(
+                <tr key={rank}>
+                    <td>
+                        <p>{rank}) </p>
+                    </td>
+                    <td>
+                        <p>{score} </p>
+                    </td>
+                    <td>{generateStars(stars)}</td>
+                    <td>
+                        <p
+                            style={{
+                                color: 'rgb(' + color + ')',
+                                textShadow: '0 0 4px rgb(' + color + ')',
+                            }}
+                        >
+                            {teamName}{' '}
+                        </p>
+                    </td>
+                    <td>
+                        <p
+                            style={{
+                                color: 'rgb(' + color + ')',
+                                textShadow: '0 0 4px rgb(' + color + ')',
+                            }}
+                        >
+                            ({schools})
+                        </p>
+                    </td>
+                </tr>
+            );
+        }
+        return elements;
+    }
+
     function renderIndividuals() {
         let elements = [];
         let aocMembers = Object.values(AOC.members);
@@ -94,7 +206,9 @@ export default function leaderboard({ AOC, form }) {
             let {
                 ['What is your first and last name?']: name,
                 ['Which school do you attend?']: school,
+                ['Are you participating as part of a team or as an individual?']: team,
             } = formUser;
+            if (team == 'Team') continue;
             let { local_score: score, stars } = AOCUser;
 
             let rank = elements.length + 1;
@@ -138,14 +252,16 @@ export default function leaderboard({ AOC, form }) {
                     </table>
                 </div>
                 <div className={styles.section}>
+                    <h2>Teams</h2>
+                    <table>
+                        <tbody>{renderTeams()}</tbody>
+                    </table>
+                </div>
+                <div className={styles.section}>
                     <h2>Individuals</h2>
                     <table>
                         <tbody>{renderIndividuals()}</tbody>
                     </table>
-                </div>
-                <div className={styles.section}>
-                    <h2>Teams</h2>
-                    <div></div>
                 </div>
             </div>
         </>
