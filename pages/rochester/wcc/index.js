@@ -6,13 +6,13 @@ export default function WCC() {
     return (
         <>
             <Head>
-                <title>MN Computer Club AOC WCC</title>
+                <title>RCC Winter Coding Competition</title>
             </Head>
             <div className={styles.wcc}>
-                <h1>MN Computer Club AOC WCC</h1>
-                <Link href="/rochester/wcc/leaderboard">View the leaderboard</Link>
+                <h1>Rochester Computer Club Winter Coding Competition</h1>
+                <h2><Link href="/rochester/wcc/leaderboard">View the leaderboard</Link></h2>
                 <p>
-                    Every December, the Minnesota Computer Club hosts a programming competition for
+                    Every December, the Rochester Computer Club hosts a programming competition for
                     all middle and high school students.
                     <br />
                     <br />
@@ -93,7 +93,7 @@ export default function WCC() {
                     <br />
                     <br />
                     Want to chat with other participants? Want to find a team? You will need to go
-                    to join the Minnesota Computer Club discord server. Email{' '}
+                    to join the Rochester Computer Club discord server. Email{' '}
                     <a href="mailto:info@mncomputerclub.com">info@mncomputerclub.com</a>
                 </p>
                 <div className={styles.sponsors}>
