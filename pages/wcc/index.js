@@ -5,10 +5,10 @@ export default function WCC() {
     return (
         <>
             <Head>
-                <title>MN Computer Club AOC WCC</title>
+                <title>MN Computer Club Winter Coding Comptetition</title>
             </Head>
             <div className={styles.wcc}>
-                <h1>MN Computer Club AOC WCC</h1>
+                <h1>Minnesota Computer Club Winter Coding Comptetition</h1>
                 <p>
                     Every December, the Minnesota Computer Club hosts a programming competition for
                     all middle and high school students.
