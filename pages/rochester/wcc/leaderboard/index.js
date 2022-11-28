@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from './leaderboard.module.scss';
-const fs = require('fs');
 
 export default function leaderboard({ AOC, form }) {
     const MAX_STARS = 25;
