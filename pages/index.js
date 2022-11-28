@@ -10,9 +10,14 @@ export default function Index() {
             </Head>
             <div className={styles.index}>
                 <h1>Minnesota Computer Club</h1>
-                <h2>👷 Under Construction 👷‍♀️</h2>
+                <p>
+                    The Minnesota Computer Club is a Discord-based community of students and
+                    teachers from all across Minnesota. If you would like to join, please email:
+                    info@mncomputerclub.com
+                </p>
                 <h3>
-                    Check out the <Link href="/wcc/">Winter Coding Competition</Link>
+                    Check out the <Link href="/wcc/">Winter Coding Competition</Link>. It is open to
+                    all middle and high-school students in Minnesota.
                 </h3>
             </div>
         </>
