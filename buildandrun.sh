@@ -1,4 +1,4 @@
 npm install
 npm run build
-killall node
+pkill node
 node index.js
