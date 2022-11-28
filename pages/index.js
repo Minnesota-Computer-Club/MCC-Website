@@ -19,6 +19,10 @@ export default function Index() {
                     Check out the <Link href="/wcc/">Winter Coding Competition</Link>. It is open to
                     all middle and high-school students in Minnesota.
                 </h3>
+                <h3>
+                    If you leave near Rochester, please join the <Link href="/rochester/">Rochester Computer Club</Link> as well. 
+                    There is an additional Winter Coding Competition for Rochester students, who are welcome to join both!
+                </h3>
             </div>
         </>
     );
