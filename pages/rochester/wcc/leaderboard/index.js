@@ -240,7 +240,20 @@ export default function leaderboard({ AOC, form }) {
                 <title>MN Computer Club Winter Programming Competition 2022 Leaderboard</title>
             </Head>
             <div className={styles.leaderboard}>
-                <h1>MN Computer Club Winter Programming Competition 2022 Leaderboard</h1>
+                <h1
+                    onClick={(e) => {
+                        let title = e.target.innerText;
+                        let newTitle =
+                            'Made by github.com/KennyHarrer 👺 with help from github.com/jobartucz 🤔';
+                        if (title == newTitle) return;
+                        e.target.innerText = newTitle;
+                        setTimeout(() => {
+                            e.target.innerText = title;
+                        }, 5000);
+                    }}
+                >
+                    MN Computer Club Winter Programming Competition 2022 Leaderboard
+                </h1>
                 <div className={styles.section}>
                     <h2>Statistics</h2>
                     <div></div>
