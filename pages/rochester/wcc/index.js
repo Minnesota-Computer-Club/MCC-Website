@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from './wwc.module.scss';
 
 export default function WCC() {
@@ -9,6 +10,7 @@ export default function WCC() {
             </Head>
             <div className={styles.wcc}>
                 <h1>MN Computer Club AOC WCC</h1>
+                <Link href="/rochester/wcc/leaderboard">View the leaderboard</Link>
                 <p>
                     Every December, the Minnesota Computer Club hosts a programming competition for
                     all middle and high school students.
