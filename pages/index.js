@@ -1,3 +1,5 @@
+import styles from './index.module.scss';
+
 import Link from 'next/link';
 import Head from 'next/head';
 
