@@ -29,7 +29,7 @@ In order to run the website locally, the following will need to be installed on 
 ### Clone Repo
 Navigate to the location on your development machine where you want to place this project's directory and clone the repository by running the following command:
 
-    git clone https://github.com/mike-weiner/MCC-Website.git
+    git clone https://github.com/Minnesota-Computer-Club/MCC-Website.git
 
 ### Install npm Packages
 The MCC website requires several npm packages to be installed. Those packages can be installed by running:
