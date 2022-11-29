@@ -13,7 +13,7 @@ export default function Index() {
                 <link rel="icon" type="image/x-icon" href="./favicon.ico" />
                 <title>Minnesota Computer Club</title>
             </Head>
-
+            
             <header className="text-white bg-darkpurple">
                 <nav className="mx-auto p-3 overflow-auto text-white items-center">
                     <div className="flex flex-col sm:flex-row font-bold justify-between items-center">
