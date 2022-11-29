@@ -8,16 +8,11 @@ p {
     font-family: 'Source Code Pro', monospace;
 }
 
-* {
-    box-sizing: border-box;
+body {
+    color: white;
+    background: #0f0f23;
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-    body {
-        color: white;
-        background: #0f0f23;
-    }
+* {
+    box-sizing: border-box;
 }

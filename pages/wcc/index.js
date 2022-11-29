@@ -76,10 +76,7 @@ export default function WCC() {
                 <h1>How to participate</h1>
                 <p>
                     To participate, please fill out{' '}
-                    <a href="https://forms.gle/1hFTUsLNribKy9fm6">this google form</a> and then fill
-                    out the form on{' '}
-                    <a href="https://sites.google.com/isd535.org/cs-pathways/contests">this page</a>{' '}
-                    if you are a student. <i>(required)</i>
+                    <a href="https://forms.gle/1hFTUsLNribKy9fm6">this google form</a>. <i>(required)</i>
                     <br />
                     <br />
                     Want to chat with other participants? Want to find a team? You will need to go
