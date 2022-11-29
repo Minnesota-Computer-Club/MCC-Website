@@ -20,7 +20,7 @@ export default function Index() {
                     all middle and high-school students in Minnesota.
                 </h3>
                 <h3>
-                    If you leave near Rochester, please join the <Link href="/rochester/">Rochester Computer Club</Link> as well. 
+                    If you leave near Rochester, please join the <Link href="/rochester/wcc/">Rochester Computer Club</Link> as well. 
                     There is an additional Winter Coding Competition for Rochester students, who are welcome to join both!
                 </h3>
             </div>
