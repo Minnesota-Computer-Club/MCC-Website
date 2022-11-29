@@ -88,7 +88,7 @@ export default function WCC() {
                     To participate, please use your google account to{' '}
                     <a href="https://adventofcode.com/2022/auth/login">log in here</a> and then fill
                     out the form on{' '}
-                    <a href="https://sites.google.com/isd535.org/cs-pathways/contests">this page</a>{' '}
+                    <a href="https://forms.gle/4g9MYAjyY4KmnvEo9">this page</a>{' '}
                     <i>(required)</i>
                     <br />
                     <br />
