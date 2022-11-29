@@ -33,7 +33,7 @@ export default function Index() {
 
 
             <main>
-                <div className="bg-gray-100 p-10 text-center">
+                <div className="p-10 text-center">
                     <div className="max-w-xs mx-auto hover:underline cursor-pointer">
                         <Link href="/"><Image src="/mn-computer-club-round.png" alt="Picture of the author" width='2000' height='2000'></Image></Link>
                     </div>
@@ -51,7 +51,7 @@ export default function Index() {
                         <p>You can obtain an invite to the Discord server by clicking the <span className="font-semibold text-darkpurple">Join the Discord!</span> button above or below. This will open an email client for you to send an email to <a className="font-bold hover:underline hover:cursor-pointer" href="mailto:info@mncomputerclub.com?subject=Requesting an Invite to MCC Discord Server">info@mncomputerclub.com</a> to request an invite code. This will help protect our community from spam abuse.</p>
                     </div>
 
-                    <div className="bg-white">
+                    <div>
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                             <div className="mt-20 max-w-lg sm:mx-auto md:max-w-none">
@@ -125,7 +125,7 @@ export default function Index() {
 
                 </div>
 
-                <div className="bg-gray-100">
+                <div>
                     <div className="mx-auto py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
                         <h2 className="text-3xl tracking-tigh sm:text-4xl">
                             <span className="block">We want you!</span>
@@ -140,7 +140,7 @@ export default function Index() {
                 </div>
             </main>
 
-            <footer className="bg-gray-100 px-4 sm:px-6 lg:px-8 pb-2">
+            <footer className="px-4 sm:px-6 lg:px-8 pb-2">
                 © 2022 Minnesota Computer Club | <a href="mailto:info@mncomputerclub.com">info@mncomputerclub.com</a>
             </footer>
         </>
