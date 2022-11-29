@@ -23,7 +23,7 @@ It is easy to get a copy of of MCC website running locally.
 ### Install Dependencies
 In order to run the website locally, the following will need to be installed on your development environment:
 - [npm](https://www.npmjs.com) (required)
-  - npm is used to manage the packages needed by KenyonWX to run on top of Node.js
+  - npm is used to manage the packages needed by the MCC Website to run on top of Node.js
   - **Installation Instructions:** [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ### Clone Repo
@@ -43,7 +43,8 @@ Start the MCC website by running:
 
     npm run dev
 
-This command is going to start a local development environment for you to make changes locally.
+This command is going to start a local development server for you to make changes locally.
+
 ### Other Commands to Know
 There are several other commands defined in `package.json` that you should be familiar with:
 - `npm run build`: This command can be run if you want to generate an optimized version of your application for production. Read more at [https://nextjs.org/docs/deployment](https://nextjs.org/docs/deployment).
