@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Footer from '../components/Footer/footer';
+import Header from '../components/Header/header';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,8 +20,8 @@ export default function Index() {
             <Header></Header>
 
             <main>
-                <div className="p-10 text-center">
-                    <div className="max-w-xs mx-auto hover:underline cursor-pointer">
+                <div className={styles.heroWrapper}>
+                    <div className={styles.heroImageWrapper}>
                         <Link href="/"><Image src="/mn-computer-club-round.png" alt="Picture of the author" width='2000' height='2000'></Image></Link>
                     </div>
 
@@ -31,14 +31,14 @@ export default function Index() {
                     </p>
                 </div>
 
-                <div className="p-8">
-                    <div className="text-center">
-                        <h3 className="text-3xl py-4">Who can join?</h3>
-                        <p className="pb-4">The Minnesota Computer Club is open and welcoming to <span className="font-bold italic">anyone</span> that is interested in Computer Science! You might already teach Computer Science to others. You might be thinking about perusing higher education in Computer Science. You might be tech support for the entire family. You might be an industry professional. You might know absolutely nothing about Computer Science but are interested in learning more. We want ALL of you to join!</p>
-                        <p>You can obtain an invite to the Discord server by clicking the <span className="font-semibold text-darkpurple">Join the Discord!</span> button above or below. This will open an email client for you to send an email to <a className="font-bold hover:underline hover:cursor-pointer" href="mailto:info@mncomputerclub.com?subject=Requesting an Invite to MCC Discord Server">info@mncomputerclub.com</a> to request an invite code. This will help protect our community from spam abuse.</p>
+                <div className={styles.clubInfoWrapper}>
+                    <div>
+                        <h3>Who can join?</h3>
+                        <p>The Minnesota Computer Club is open and welcoming to <span className="font-bold italic">anyone</span> that is interested in Computer Science! You might already teach Computer Science to others. You might be thinking about perusing higher education in Computer Science. You might be tech support for the entire family. You might be an industry professional. You might know absolutely nothing about Computer Science but are interested in learning more. We want ALL of you to join!</p>
+                        <p>You can obtain an invite to the Discord server by clicking the <span className={styles.inlineEmphasis}>Join the Discord!</span> button above or below. This will open an email client for you to send an email to <a className={styles.inlineLink} href="mailto:info@mncomputerclub.com?subject=Requesting an Invite to MCC Discord Server">info@mncomputerclub.com</a> to request an invite code. This will help protect our community from spam abuse.</p>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                             <div className="mt-20 max-w-lg sm:mx-auto md:max-w-none">
@@ -108,20 +108,18 @@ export default function Index() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 
                 <div>
-                    <div className="mx-auto py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-                        <h2 className="text-3xl tracking-tigh sm:text-4xl">
-                            <span className="block">We want you!</span>
-                            <span className="block font-bold text-medpurple">Join our growing community.</span>
+                    <div className={styles.ctaWrapper}>
+                        <h2>
+                            <span>We want you!</span>
+                            <span className={styles.mediumPurpleText}>Join our growing community.</span>
                         </h2>
-                        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                            <div className="ml-3 inline-flex rounded-md shadow">
-                                <a href="mailto:info@mncomputerclub.com?subject=Requesting an Invite to MCC Discord Server" className="inline-flex items-center justify-center rounded-md border border-transparent bg-darkpurple px-5 py-3 text-base font-medium text-white hover:bg-white hover:text-darkpurple">Join the Discord Server</a>
-                            </div>
+                        <div className={styles.btnWrapper}>
+                            <a href="mailto:info@mncomputerclub.com?subject=Requesting an Invite to MCC Discord Server">Join the Discord Server</a>
                         </div>
                     </div>
                 </div>

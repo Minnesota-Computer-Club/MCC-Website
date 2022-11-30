@@ -15,7 +15,6 @@ The Minnesota Computer Club (MCC) is a Discord-based community of students and t
 ## Built Using
 The Minnesota Computer Club website was built using:
 - [Next.js](https://nextjs.org) (v13.0.0+)
-- [Tailwind CSS](https://tailwindcss.com/) (v3.0.0+)
 
 ## Running Locally
 It is easy to get a copy of of MCC website running locally.

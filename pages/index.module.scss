@@ -1,3 +1,111 @@
-.index {
-    padding: 20px;
+$darkpurple: #7060A9;
+$medpurple: #B997DD;
+
+main {
+    .heroWrapper {
+        padding-top: 2.5rem;
+        text-align: center;
+
+        .heroImageWrapper {
+            margin-left: auto;
+            margin-right: auto;
+
+            a {
+                img {
+                    max-width: 20rem;
+                    max-height: 20rem;
+                }
+            }
+        }
+    }
+
+    .clubInfoWrapper {
+        padding: 2rem;
+        text-align: center;
+
+        div {
+            p {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .ctaWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        h2 {
+            span {
+                display: block;
+            }
+        }
+
+        .btnWrapper {
+            display: flex;
+            margin-top: 2rem;
+
+            a {
+                align-items: center;
+                background-color: $darkpurple;
+                border-radius: 0.375rem;
+                color: white;
+                display: inline-flex;
+                justify-content: center;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+                padding-bottom: 0.75rem;
+                padding-top: 0.75rem;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: white;
+                    color: $darkpurple;
+                }
+            }
+            
+
+            @media (min-width: 1024px) {
+                flex-shrink: 0;
+                margin-top: 0px;
+              }
+        }
+
+        @media (min-width: 640px) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+.inlineEmphasis {
+    color:white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.inlineLink {
+    color:#7060A9;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.mediumPurpleText {
+    color: $medpurple;
 }

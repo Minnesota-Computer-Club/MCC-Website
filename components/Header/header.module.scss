@@ -1,0 +1,56 @@
+$darkpurple: #7060A9;
+
+.headerComponentWrapper {
+  color: white;
+  background-color: $darkpurple;
+
+  nav {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem;
+    overflow: auto;
+  }
+
+  .navItemWrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    float: center;
+    font-weight: bold;
+    justify-content: space-between;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      float: right;
+    }
+
+    .navItem {
+      border: solid;
+      border-color: white;
+      border-width: 1px;
+      border-radius: 0.25rem;
+      color: white;
+      display: inline-block;
+      font-size: 0.875rem;
+      line-height: 1;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: white;
+        border-color: transparent;
+        color: $darkpurple;
+      }
+
+      @media (min-width: 680px) {
+        margin-top: 0rem;
+      }
+    }
+  }
+}
