@@ -1,5 +1,6 @@
 $darkpurple: #7060A9;
 $medpurple: #B997DD;
+$lightpurple: #E1C4F0;
 
 main {
     .heroWrapper {
@@ -26,6 +27,96 @@ main {
         div {
             p {
                 padding-bottom: 1rem;
+            }
+        }
+
+        .clubHighlightsWrapper {
+            margin-left: auto;
+            margin-right: auto; 
+            max-width: 80rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem; 
+            
+            @media (min-width: 1024px) { 
+                padding-left: 2rem;
+                padding-right: 2rem; 
+            }
+
+            .highlightsRowWrapper {
+                margin-top: 5rem; 
+                max-width: 32rem; 
+
+                @media (min-width: 640px) { 
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @media (min-width: 768px) { 
+                    max-width: none; 
+                }
+
+                .highlightsRowItemsWrapper {
+                    display: grid; 
+                    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+                    row-gap: 4rem; 
+
+                    @media (min-width: 768px) { 
+                        column-gap: 3rem; 
+                        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+                        row-gap: 4rem; 
+                    }
+
+                    .highlightWrapper {
+                        display: flex;  
+                        flex-direction: column; 
+                        gap: 1.5rem;
+                        position: relative;
+    
+                        @media (min-width: 768px) { 
+                            flex-direction: row; 
+                        }
+    
+                        @media (min-width: 1024px) { 
+                            flex-direction: row; 
+                        }
+    
+                        .highlightIconWrapper {
+                            align-items: center; 
+                            background-color: $lightpurple;
+                            border-radius: 0.75rem;
+                            color: $darkpurple;
+                            display: flex; 
+                            height: 3rem;
+                            justify-content: center; 
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 3rem; 
+
+                            svg {
+                                height: 1.5rem;
+                                width: 1.5rem;
+                            }
+    
+                            @media (min-width: 640px) { 
+                                flex-shrink: 0;
+                            }
+                        }
+
+                        .highlightDescriptionWrapper {
+                            @media (min-width: 640px) { 
+                                flex: 1 1 0%; 
+                                min-width: 0; 
+                            }
+
+                            .highlightDescriptionTitle {
+                                font-weight: 600; 
+                            }
+
+                            .highlightDescription {
+                                margin-top: 0.5rem; 
+                            }
+                        }
+                    }
+                }
             }
         }
     }
