@@ -19,7 +19,7 @@ export default function Index() {
                     <div className="flex flex-col sm:flex-row font-bold justify-between items-center">
                         <div className="flex flex-col sm:flex-row justify-center text-base leading-6 sm:text-lg sm:leading-7">
 
-                            <div className="text-center mx-4 py-2 sm:py-0 font-bold hover:underline cursor-pointer">
+                            <div className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-darkpurple hover:bg-white mt-4 lg:mt-0">
                                 <Link href="/wcc">Winter Coding Competition</Link>
                             </div>
 
