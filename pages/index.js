@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
-import Footer from '../components/Footer/footer';
-import Header from '../components/Header/header';
+import Footer from '../components/Landing Page/Footer/footer';
+import Header from '../components/Landing Page/Header/header';
 
 import Image from 'next/image';
 import Link from 'next/link';

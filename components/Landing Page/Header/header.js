@@ -8,6 +8,9 @@ const Header = () => {
     <header className={styles.headerComponentWrapper}>
       <nav>
         <div className={styles.navItemWrapper}>
+        <div>
+            <Link className={styles.navItem} href="/rochester/wcc/">Rochester Winter Coding Competition</Link>
+          </div>
           <div>
             <Link className={styles.navItem} href="/wcc">Winter Coding Competition</Link>
           </div>
