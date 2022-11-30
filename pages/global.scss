@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+$darkpurple: #7060A9;
+
 html,
 body,
 p {
@@ -15,4 +17,15 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+a {
+    color:$darkpurple;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 }
