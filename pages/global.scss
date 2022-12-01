@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+$darkpurple: #7060A9;
+
+html,
+body,
+p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    color: white;
+    background: #0f0f23;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color:$darkpurple;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
