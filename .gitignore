@@ -1,6 +1,5 @@
 # ignore data files
 .json
-*.csv
 
 # ignore mac stupidity
 .DS_Store
