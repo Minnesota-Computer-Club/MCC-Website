@@ -3,6 +3,7 @@
     Color mixing functions
 
 */
+import styles from "../styles.module.scss";
 
 function hexToRGB(hex) {
     let aRgbHex = hex.match(/.{1,2}/g);
@@ -29,7 +30,7 @@ export default function TeamLeaderboard({
     generateStars,
     getSchoolColor,
     isUserValid,
-    calcualteTeamStars,
+    calculateTeamStars,
 }) {
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
@@ -83,7 +84,7 @@ export default function TeamLeaderboard({
         let score = members.reduce(function (totalScore, member) {
             return totalScore + member.score;
         }, 0);
-        let stars = calcualteTeamStars(members);
+        let stars = calculateTeamStars(members);
         tableRows.push(
             <tr key={rank}>
                 <td>
@@ -92,7 +93,11 @@ export default function TeamLeaderboard({
                 <td>
                     <p>{score} </p>
                 </td>
-                <td>{generateStars(stars)}</td>
+                <td className={styles.mobile} style={{
+                            color: 'rgb(' + color + ')',
+                            textShadow: '0 0 4px rgb(' + color + ')',
+                        }}>{stars}★ </td>
+                <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
                     <p
                         style={{

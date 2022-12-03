@@ -1,4 +1,5 @@
-import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import coloredStyles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import styles from '../styles.module.scss';
 
 export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
     let tableRows = []; //array of table rows with info
@@ -27,12 +28,13 @@ export default function IndividualLeaderboard({ AOC, form, generateStars, isUser
                 <td>
                     <p>{score} </p>
                 </td>
-                <td>{generateStars(stars)}</td>
+                <td className={styles.mobile + " " + coloredStyles[school.replace(/ /g, '')]}>{stars}★ </td>
+                <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
-                    <p className={styles[school.replace(/ /g, '')]}>{name} </p>
+                    <p className={coloredStyles[school.replace(/ /g, '')] + " " + styles.shorten}>{name} </p>
                 </td>
                 <td>
-                    <p className={styles[school.replace(/ /g, '')]}>({school})</p>
+                    <p className={coloredStyles[school.replace(/ /g, '')]}>({school})</p>
                 </td>
             </tr>
         );

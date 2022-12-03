@@ -1,6 +1,7 @@
-import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import colorStyles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import styles from '../styles.module.scss';
 
-export default function renderSchools({ AOC, form, isUserValid, calcualteTeamStars }) {
+export default function renderSchools({ AOC, form, isUserValid, calculateTeamStars }) {
     let schools = {}; //obj containing schoolName: obj leaderboard stats
     let teams = {}; //obj containing teamName: array team members
     let aocMembers = Object.values(AOC.members);
@@ -12,7 +13,7 @@ export default function renderSchools({ AOC, form, isUserValid, calcualteTeamSta
             ['Which school do you attend?']: school,
             ['Are you participating as part of a team or as an individual?']: team,
             ['What is your team name? (Make sure all your team members use the same team name!)']:
-                teamName,
+            teamName,
         } = formUser; //grab what school they go to
         let { stars } = AOCUser; //grab their stars
         if (team == 'Team') {
@@ -28,7 +29,7 @@ export default function renderSchools({ AOC, form, isUserValid, calcualteTeamSta
     //team memebers of each team
     for (let members of Object.values(teams)) {
         let ratio = 1 / members.length;
-        let stars = calcualteTeamStars(members);
+        let stars = calculateTeamStars(members);
         console.group(stars)
         //for each school of the team members
         for (let { school } of members) {
@@ -54,30 +55,30 @@ export default function renderSchools({ AOC, form, isUserValid, calcualteTeamSta
         tableRows.push(
             <tr key={rank}>
                 <td>
-                    <p className={styles[cssClassName]}>{rank}) </p>
+                    <p className={colorStyles[cssClassName]}>{rank}) </p>
                 </td>
                 <td>
-                    <p className={styles[cssClassName]} style={{ textAlign: 'start' }}>
+                    <p className={colorStyles[cssClassName]} style={{ textAlign: 'start' }}>
                         {school.name}{' '}
                     </p>
                 </td>
                 <td>
-                    <p className={styles[cssClassName]}>★Total Stars: </p>
+                    <p className={colorStyles[cssClassName]}>Stars: </p>
                 </td>
                 <td>
-                    <p className={styles[cssClassName]}>{Math.round(school.stars*10)/10}★ </p>
+                    <p className={colorStyles[cssClassName]}>{Math.round(school.stars * 10) / 10} ★</p>
                 </td>
-                <td>
-                    <p className={styles[cssClassName]}>Total Participants: </p>
+                <td className={styles.hide}>
+                    <p className={colorStyles[cssClassName]}>Total Participants: </p>
                 </td>
-                <td>
-                    <p className={styles[cssClassName]}>{Math.round(school.players*10)/10} </p>
+                <td className={styles.hide}>
+                    <p className={colorStyles[cssClassName]}>{Math.round(school.players * 10) / 10} </p>
                 </td>
-                <td>
-                    <p className={styles[cssClassName]}>Efficiency: </p>
+                <td className={styles.hide}>
+                    <p className={colorStyles[cssClassName]}>Efficiency: </p>
                 </td>
-                <td>
-                    <p className={styles[cssClassName]}>{school.efficiency.toFixed(1)}</p>
+                <td className={styles.hide}>
+                    <p className={colorStyles[cssClassName]}>{school.efficiency.toFixed(1)}</p>
                 </td>
             </tr>
         );

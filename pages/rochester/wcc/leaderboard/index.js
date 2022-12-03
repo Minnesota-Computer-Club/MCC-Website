@@ -64,7 +64,7 @@ export default function leaderboard({ AOC, form }) {
 
     */
 
-    function calcualteTeamStars(teamMembers) {
+    function calculateTeamStars(teamMembers) {
         let counted = {};
         let stars = 0;
         for (let { completion_day_level } of teamMembers) {
@@ -106,7 +106,7 @@ export default function leaderboard({ AOC, form }) {
 
             <div className={styles.leaderboard}>
                 <h1 onClick={titleEasterEgg}>
-                    MN Computer Club Winter Programming Competition 2022 Leaderboard
+                    Rochester Leaderboard
                 </h1>
                 <div className={styles.section}>
                     <h2>Statistics</h2>
@@ -117,7 +117,7 @@ export default function leaderboard({ AOC, form }) {
                     <table>
                         <tbody>
                             <SchoolLeaderboard
-                                {...{ AOC, form, generateStars, isUserValid, calcualteTeamStars }}
+                                {...{ AOC, form, generateStars, isUserValid, calculateTeamStars }}
                             />
                         </tbody>
                     </table>
@@ -133,7 +133,7 @@ export default function leaderboard({ AOC, form }) {
                                     generateStars,
                                     getSchoolColor,
                                     isUserValid,
-                                    calcualteTeamStars,
+                                    calculateTeamStars,
                                 }}
                             />
                         </tbody>
