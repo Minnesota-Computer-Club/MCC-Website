@@ -3,6 +3,7 @@
     Color mixing functions
 
 */
+import styles from "../styles.module.scss";
 
 function hexToRGB(hex) {
     let aRgbHex = hex.match(/.{1,2}/g);
@@ -92,7 +93,11 @@ export default function TeamLeaderboard({
                 <td>
                     <p>{score} </p>
                 </td>
-                <td>{generateStars(stars)}</td>
+                <td className={styles.mobile} style={{
+                            color: 'rgb(' + color + ')',
+                            textShadow: '0 0 4px rgb(' + color + ')',
+                        }}>{stars}★ </td>
+                <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
                     <p
                         style={{
