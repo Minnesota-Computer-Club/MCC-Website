@@ -4,7 +4,7 @@ import styles from '../styles.module.scss';
 export default function renderSchools({ AOC, form, isUserValid, calculateTeamStars }) {
     let schools = {}; //obj containing schoolName: obj leaderboard stats
     let teams = {}; //obj containing teamName: array team members
-    let aocMembers = Object.values(AOC.members);
+    let aocMembers = Object.values(AOC);
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
