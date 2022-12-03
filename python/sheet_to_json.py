@@ -20,8 +20,8 @@ EXCLUDED_COLS = {'Email Address', 'What is your t-shirt size?'}
 IS_SERVER = socket.gethostname() == 'mncomputerclub.com'
 
 OUTPUT_FILES = {
-    "MCC": "/var/www/MCC-Website/python/users_mn.json" if IS_SERVER else "./users_mn.json",
-    "RCC": "/var/www/MCC-Website/python/users_roch.json" if IS_SERVER else "./users_roch.json"
+    "MCC": "/home/kennyharrer/nextjs/python/users_mn.json" if IS_SERVER else "./users_mn.json",
+    "RCC": "/home/kennyharrer/nextjs/python/users_roch.json" if IS_SERVER else "./users_roch.json"
 }
 
 # Path to the token can be passed as an argument
