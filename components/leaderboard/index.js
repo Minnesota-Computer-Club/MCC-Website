@@ -3,7 +3,7 @@ import styles from './leaderboard.module.scss';
 import IndividualLeaderboard from '../leaderboard/individuals';
 import TeamLeaderboard from '../leaderboard/teams';
 import SchoolLeaderboard from '../leaderboard/schools';
-import { Nav } from '../Landing Page/Nav/nav';
+import { Nav } from '/components/Nav/nav';
 
 const MAX_STARS = 25;
 const STAR = '★';

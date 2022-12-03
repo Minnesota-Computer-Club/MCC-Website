@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Nav } from '../../components/Landing Page/Nav/nav';
+import { Nav } from '/components/Nav/nav';
 import styles from './wwc.module.scss';
 import Link from 'next/link';
 

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { Nav } from '../../../components/Landing Page/Nav/nav';
+import { Nav } from '/components/Nav/nav';
 import styles from './wwc.module.scss';
 
 export default function WCC() {
