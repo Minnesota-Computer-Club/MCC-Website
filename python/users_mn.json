@@ -8,12 +8,12 @@
     "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, Java"
   },
   "Nifley": {
-    "Timestamp": "11/18/2022 19:11:19",
+    "Timestamp": "12/3/2022 12:38:24",
     "What is your first and last name?": "Finley Bartholmai",
     "Which school do you attend?": "Century",
     "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Nifley",
     "If you are participating in the MCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/npuWmAu7t7  - Please enter your Discord username so we can verify you.": "Nifley",
-    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, I will problably complete many of the low-numbered days in rust initially"
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, Rust"
   },
   "Junhao Zhang": {
     "Timestamp": "11/21/2022 21:09:41",
@@ -229,6 +229,22 @@
     "Which school do you attend?": "Prior lake high school",
     "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Jake Horner",
     "If you are participating in the MCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/npuWmAu7t7  - Please enter your Discord username so we can verify you.": "ekaJ#6339",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java"
+  },
+  "Icebluewolf": {
+    "Timestamp": "12/3/2022 7:08:30",
+    "What is your first and last name?": "Max Oftedahl",
+    "Which school do you attend?": "Century High School",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Icebluewolf",
+    "If you are participating in the MCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/npuWmAu7t7  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python"
+  },
+  "Sam Geng": {
+    "Timestamp": "12/3/2022 11:19:43",
+    "What is your first and last name?": "Sam Geng",
+    "Which school do you attend?": "Prior Lake",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Sam Geng",
+    "If you are participating in the MCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/npuWmAu7t7  - Please enter your Discord username so we can verify you.": "StandingAbove",
     "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java"
   }
 }
