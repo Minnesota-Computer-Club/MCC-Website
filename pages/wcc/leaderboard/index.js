@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Nav } from '../../../components/Landing Page/Nav/nav';
 import styles from './leaderboard.module.scss';
 
 export default function leaderboard({ AOC, form }) {
@@ -125,6 +126,9 @@ export default function leaderboard({ AOC, form }) {
             <Head>
                 <title>MN Computer Club Winter Programming Competition 2022 Leaderboard</title>
             </Head>
+
+            <Nav />
+
             <div className={styles.leaderboard}>
                 <h1>MN Computer Club Winter Programming Competition 2022 Leaderboard</h1>
                 <div className={styles.section}>

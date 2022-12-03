@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { Nav } from '../../../components/Landing Page/Nav/nav';
 import styles from './wwc.module.scss';
 
 export default function WCC() {
@@ -8,6 +9,7 @@ export default function WCC() {
             <Head>
                 <title>RCC Winter Coding Competition</title>
             </Head>
+            <Nav />
             <div className={styles.wcc}>
                 <h1>Rochester Computer Club Winter Coding Competition</h1>
                 <h2><Link href="/rochester/wcc/leaderboard">View the leaderboard</Link></h2>
