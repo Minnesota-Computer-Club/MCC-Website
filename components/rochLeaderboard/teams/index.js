@@ -3,6 +3,7 @@
     Color mixing functions
 
 */
+import lbStyles from '../../../pages/rochester/wcc/leaderboard/leaderboard.module.scss';
 import styles from "../styles.module.scss";
 
 function hexToRGB(hex) {
@@ -93,10 +94,7 @@ export default function TeamLeaderboard({
                 <td>
                     <p>{score} </p>
                 </td>
-                <td className={styles.mobile} style={{
-                            color: 'rgb(' + color + ')',
-                            textShadow: '0 0 4px rgb(' + color + ')',
-                        }}>{stars}★ </td>
+                <td className={styles.mobile + " " + (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)}>{stars}★ </td>
                 <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
                     <p
