@@ -19,7 +19,7 @@ export default function Index() {
             <main>
                 <div className={styles.heroWrapper}>
                     <div className={styles.heroImageWrapper}>
-                        <Link href="/"><Image src="/mn-computer-club-round.png" alt="Picture of the author" width='2000' height='2000'></Image></Link>
+                        <Link href="/"><img src="/mn-computer-club-round.png" alt="Minnesota Computer Club Logo" width='2000' height='2000'></img></Link>
                     </div>
 
                     <h2 className="text-4xl py-4">Minnesota Computer Club</h2>
