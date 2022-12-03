@@ -1,4 +1,4 @@
-import colorStyles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import colorStyles from '../schoolColors.module.scss';
 import styles from '../styles.module.scss';
 
 export default function renderSchools({ AOC, form, isUserValid, calculateTeamStars }) {
@@ -13,7 +13,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
             ['Which school do you attend?']: school,
             ['Are you participating as part of a team or as an individual?']: team,
             ['What is your team name? (Make sure all your team members use the same team name!)']:
-            teamName,
+                teamName,
         } = formUser; //grab what school they go to
         let { stars } = AOCUser; //grab their stars
         if (team == 'Team') {
@@ -30,7 +30,6 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
     for (let members of Object.values(teams)) {
         let ratio = 1 / members.length;
         let stars = calculateTeamStars(members);
-        console.group(stars)
         //for each school of the team members
         for (let { school } of members) {
             if (!schools[school]) schools[school] = { name: school, stars: 0, players: 0 }; //initialize this school if need be
@@ -66,13 +65,17 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                     <p className={colorStyles[cssClassName]}>Stars: </p>
                 </td>
                 <td>
-                    <p className={colorStyles[cssClassName]}>{Math.round(school.stars * 10) / 10} ★</p>
+                    <p className={colorStyles[cssClassName]}>
+                        {Math.round(school.stars * 10) / 10} ★
+                    </p>
                 </td>
                 <td className={styles.hide}>
                     <p className={colorStyles[cssClassName]}>Total Participants: </p>
                 </td>
                 <td className={styles.hide}>
-                    <p className={colorStyles[cssClassName]}>{Math.round(school.players * 10) / 10} </p>
+                    <p className={colorStyles[cssClassName]}>
+                        {Math.round(school.players * 10) / 10}{' '}
+                    </p>
                 </td>
                 <td className={styles.hide}>
                     <p className={colorStyles[cssClassName]}>Efficiency: </p>

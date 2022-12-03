@@ -1,4 +1,4 @@
-import coloredStyles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import coloredStyles from '../schoolColors.module.scss';
 import styles from '../styles.module.scss';
 
 export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
