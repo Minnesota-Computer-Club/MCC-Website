@@ -150,8 +150,13 @@ export default function leaderboard({ AOC, form }) {
 
 let cached = { AOC: {}, form: {} };
 let last;
+import fs from 'fs/promises';
+import path from 'path';
 
 export async function getServerSideProps() {
+    const jsonDirectory = path.join(process.cwd(), 'json');
+    const THING = JSON.parse(await fs.readFile(jsonDirectory + '/formdata.json', 'utf8'));
+
     if (last > Date.now()) {
         return { props: { AOC: cached.AOC, form: cached.form } };
     }
