@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
 import Footer from '../components/Landing Page/Footer/footer';
-import Header from '../components/Landing Page/Header/header';
+import { Nav } from '../components/Landing Page/Nav/nav';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ export default function Index() {
                 <title>Minnesota Computer Club</title>
             </Head>
 
-            <Header></Header>
+            <Nav />
 
             <main>
                 <div className={styles.heroWrapper}>

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from "react";
 
-import styles from './header.module.scss';
+import styles from './nav.module.scss';
 
-const Header = () => {
+export const Nav = () => {
   return (
     <header className={styles.headerComponentWrapper}>
       <nav>
@@ -23,4 +23,3 @@ const Header = () => {
     </header>
   );
 }
-export default Header;

@@ -4,6 +4,7 @@ import IndividualLeaderboard from '../../../../components/rochLeaderboard/indivi
 import TeamLeaderboard from '../../../../components/rochLeaderboard/teams';
 import SchoolLeaderboard from '../../../../components/rochLeaderboard/schools';
 import { readFile } from 'fs/promises';
+import { Nav } from '../../../../components/Landing Page/Nav/nav';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -100,6 +101,9 @@ export default function leaderboard({ AOC, form }) {
             <Head>
                 <title>MN Computer Club Winter Programming Competition 2022 Leaderboard</title>
             </Head>
+
+            <Nav />
+
             <div className={styles.leaderboard}>
                 <h1 onClick={titleEasterEgg}>
                     MN Computer Club Winter Programming Competition 2022 Leaderboard

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Nav } from '../../components/Landing Page/Nav/nav';
 import styles from './wwc.module.scss';
 
 export default function WCC() {
@@ -7,6 +8,9 @@ export default function WCC() {
             <Head>
                 <title>MN Computer Club Winter Coding Comptetition</title>
             </Head>
+
+            <Nav />
+
             <div className={styles.wcc}>
                 <h1>Minnesota Computer Club Winter Coding Comptetition</h1>
                 <p>
