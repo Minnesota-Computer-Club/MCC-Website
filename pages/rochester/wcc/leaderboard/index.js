@@ -4,7 +4,7 @@ import IndividualLeaderboard from '../../../../components/rochLeaderboard/indivi
 import TeamLeaderboard from '../../../../components/rochLeaderboard/teams';
 import SchoolLeaderboard from '../../../../components/rochLeaderboard/schools';
 import { readFile } from 'fs/promises';
-import { Nav } from '../../../../components/LandingPage/Nav/nav';
+import { Nav } from '../../../../components/landingPage/Nav/nav';
 
 const MAX_STARS = 25;
 const STAR = '★';
