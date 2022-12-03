@@ -51,9 +51,7 @@ export default function Leaderboard({ AOC, form, location }) {
         let formUser = form[aocUser.name];
         if (!formUser) return false; //user is not in the form
         let { stars } = aocUser;
-        let isInTeam =
-            formUser['Are you participating as part of a team or as an individual?'] == 'Team';
-        if (!isInTeam && stars == 0) return false; //if the user is not apart of a team and they dont have stars dont count them
+        if (stars == 0) return false; //if the user is not apart of a team and they dont have stars dont count them
         return true;
     }
 
