@@ -286,15 +286,15 @@
     "Who is on your team?": ""
   },
   "Natalie Duquaine": {
-    "Timestamp": "11/28/2022 14:05:22",
+    "Timestamp": "12/1/2022 13:40:01",
     "What is your first and last name?": "Natalie Duquaine",
     "Which school do you attend?": "Mayo",
     "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Natalie Duquaine",
     "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "screenqueen #3253",
-    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
-    "Are you participating as part of a team or as an individual?": "Individual",
-    "What is your team name? (Make sure all your team members use the same team name!)": "",
-    "Who is on your team?": ""
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, Java",
+    "Are you participating as part of a team or as an individual?": "Team",
+    "What is your team name? (Make sure all your team members use the same team name!)": "Runtime Terrors",
+    "Who is on your team?": "Natalie Duquaine, Ivianna Duquaine"
   },
   "Arbiter_100": {
     "Timestamp": "11/20/2022 12:59:10",
@@ -438,5 +438,181 @@
     "Are you participating as part of a team or as an individual?": "Team",
     "What is your team name? (Make sure all your team members use the same team name!)": "Top C's",
     "Who is on your team?": "Caleb Neisen"
+  },
+  "Patrick McCauley": {
+    "Timestamp": "12/1/2022 1:07:59",
+    "What is your first and last name?": "Patrick McCauley",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Patrick McCauley",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "PatrickMcCauley#1013",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, Java",
+    "Are you participating as part of a team or as an individual?": "Team",
+    "What is your team name? (Make sure all your team members use the same team name!)": "The Immutable Objects",
+    "Who is on your team?": "Jack McCauley"
+  },
+  "Stella Haakenson": {
+    "Timestamp": "12/1/2022 8:28:30",
+    "What is your first and last name?": "Stella Haakenson",
+    "Which school do you attend?": "Willow Creek",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Stella Haakenson",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, Javascript, C/C++/C#, I may use css or html if it involves visuals",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Tobias Diwan": {
+    "Timestamp": "12/1/2022 13:38:20",
+    "What is your first and last name?": "Tobias Diwan",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Tobias Diwan",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Kyal Brandt": {
+    "Timestamp": "12/1/2022 13:50:38",
+    "What is your first and last name?": "Kyal Brandt",
+    "Which school do you attend?": "Century",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Kyal Brandt",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "Mr. Brandt",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, R",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Matias Vega": {
+    "Timestamp": "12/1/2022 15:27:06",
+    "What is your first and last name?": "Matias Vega ",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Matias Vega",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "Kuozo",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java, Scratch",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Lilas Alhalhooly": {
+    "Timestamp": "12/1/2022 15:45:38",
+    "What is your first and last name?": "Lilas Alhalhooly",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Lilas Alhalhooly",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "Lilas#0815",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Andrew Sun": {
+    "Timestamp": "12/1/2022 21:27:17",
+    "What is your first and last name?": "Andrew Sun",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Andrew Sun",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "KingPiggyXXI#4366",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Abigail Wigle": {
+    "Timestamp": "12/2/2022 8:24:48",
+    "What is your first and last name?": "abby wigle",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Abigail Wigle",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Blake Thackeray": {
+    "Timestamp": "12/2/2022 12:39:07",
+    "What is your first and last name?": "Blake Thackeray",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Blake Thackeray",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Team",
+    "What is your team name? (Make sure all your team members use the same team name!)": "BS",
+    "Who is on your team?": "Blake Thackeray, Simon Argue"
+  },
+  "Simon Argue": {
+    "Timestamp": "12/2/2022 12:40:22",
+    "What is your first and last name?": "Simon Argue",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Simon Argue",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Team",
+    "What is your team name? (Make sure all your team members use the same team name!)": "BS",
+    "Who is on your team?": "Blake Thackery, Simon Argue"
+  },
+  "Eleanora Williams": {
+    "Timestamp": "12/2/2022 13:47:25",
+    "What is your first and last name?": "Eleanora Williams",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Eleanora Williams",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "ellierona#7155",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Team",
+    "What is your team name? (Make sure all your team members use the same team name!)": "The Immutable Objects",
+    "Who is on your team?": "Jack McCauley, Patrick McCauley"
+  },
+  "Jack McCauley": {
+    "Timestamp": "12/2/2022 13:47:23",
+    "What is your first and last name?": "Jack McCauley",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Jack McCauley",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "jack_mtb ",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Python, Java",
+    "Are you participating as part of a team or as an individual?": "Team",
+    "What is your team name? (Make sure all your team members use the same team name!)": "The Immutable Objects",
+    "Who is on your team?": "Patrick McCauley, Ellie Williams"
+  },
+  "Samuel Pickering ": {
+    "Timestamp": "12/2/2022 13:53:50",
+    "What is your first and last name?": "Samuel Pickering",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Samuel Pickering ",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "Sammyboi21#7015",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Maximilian Hendrickson ": {
+    "Timestamp": "12/2/2022 14:38:11",
+    "What is your first and last name?": "Maximilian Hendrickson ",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Maximilian Hendrickson ",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "Maximus55329",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Scratch",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Abdullahi Abdi": {
+    "Timestamp": "12/2/2022 15:07:18",
+    "What is your first and last name?": "Abdullahi Abdi",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Abdullahi Abdi",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Scratch",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
+  },
+  "Ethan Gaddis": {
+    "Timestamp": "12/2/2022 18:35:23",
+    "What is your first and last name?": "Ethan Gaddis",
+    "Which school do you attend?": "Mayo",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Ethan Gaddis",
+    "If you are participating in the RCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/hsN92V4  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java",
+    "Are you participating as part of a team or as an individual?": "Individual",
+    "What is your team name? (Make sure all your team members use the same team name!)": "",
+    "Who is on your team?": ""
   }
 }
