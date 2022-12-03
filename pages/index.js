@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 
-import Footer from '/components/Footer/footer';
-import { Nav } from '/components/Nav/nav';
+import Footer from '../components/Footer/footer';
+import { Nav } from '../components/Nav/nav';
 
 import Link from 'next/link';
 import Head from 'next/head';

@@ -1,4 +1,4 @@
-import { Nav } from '/components/Nav/nav';
+import { Nav } from '../../components/Nav/nav';
 import styles from './fourOhFour.module.scss';
 
 export default function FourOhFour() {
