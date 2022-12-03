@@ -185,8 +185,6 @@ export async function getServerSideProps() {
         }
     }
 
-    console.log(cached);
-
     cached.AOC = await AOCData.json();
 
     last = Date.now() + 15 * 60 * 1000;
