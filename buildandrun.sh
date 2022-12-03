@@ -1,7 +1,4 @@
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm use 16.16.0
-npm install
-npm run build
+/root/.nvm/versions/node/v17.0.0/bin/npm install
+/root/.nvm/versions/node/v17.0.0/bin/npm run build
 pkill node
-node index.js
+/root/.nvm/versions/node/v17.0.0/bin/node index.js
