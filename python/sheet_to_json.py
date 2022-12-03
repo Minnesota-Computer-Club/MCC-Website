@@ -60,8 +60,13 @@ def respsheet2json(svc, sheetID):
         hsname: str = users_json[k]["Which school do you attend?"].lower()
         for hs in ["high school", "high shcool", "highschool", "highshcool"]:
             hsname = hsname.replace(hs, "")
+            
+        hsname = string.capwords(hsname)
+            
+        if hsname in ["Jm", "John Marshall"]:
+            hsname = "JM"
 
-        users_json[k]["Which school do you attend?"] = string.capwords(hsname)
+        users_json[k]["Which school do you attend?"] = hsname
         
     return users_json
         
