@@ -17,15 +17,15 @@ SHEET_IDS = {
 # Exclude email and t-shirt size cols
 EXCLUDED_COLS = {'Email Address', 'What is your t-shirt size?'}
 
-# Path to the token can be passed as an argument
-TOKENPATH = sys.argv[1] if len(sys.argv) >= 2 else (os.path.expanduser("~")+'/google-token.json')
-
 IS_SERVER = socket.gethostname() == 'mncomputerclub.com'
 
 OUTPUT_FILES = {
     "MCC": "/var/www/MCC-Website/python/users_mn.json" if IS_SERVER else "./users_mn.json",
     "RCC": "/var/www/MCC-Website/python/users_roch.json" if IS_SERVER else "./users_roch.json"
 }
+
+# Path to the token can be passed as an argument
+TOKENPATH = "/var/www/private/AOC/2022/google-token.json" if IS_SERVER else (sys.argv[1] if len(sys.argv) >= 2 else (os.path.expanduser("~")+'/google-token.json'))
 
 # Download a google sheet and convert it to JSON which is returned as a python object
 def respsheet2json(svc, sheetID):
