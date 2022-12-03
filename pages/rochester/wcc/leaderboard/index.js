@@ -43,6 +43,22 @@ export default function leaderboard({ AOC, form }) {
 
     /*
 
+    Should this user be render & counted in stats?
+
+    */
+
+    function isUserValid(aocUser) {
+        let formUser = form[aocUser.name];
+        if (!formUser) return false; //user is not in the form
+        let { stars } = aocUser;
+        let isInTeam =
+            formUser['Are you participating as part of a team or as an individual?'] == 'Team';
+        if (!isInTeam && stars == 0) return false; //if the user is not apart of a team and they dont have stars dont count them
+        return true;
+    }
+
+    /*
+
         Add yourself if you contribute!
     
     */
@@ -74,7 +90,7 @@ export default function leaderboard({ AOC, form }) {
                     <h2>Schools</h2>
                     <table>
                         <tbody>
-                            <SchoolLeaderboard {...{ AOC, form, generateStars }} />
+                            <SchoolLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
                         </tbody>
                     </table>
                 </div>
@@ -82,7 +98,9 @@ export default function leaderboard({ AOC, form }) {
                     <h2>Teams</h2>
                     <table>
                         <tbody>
-                            <TeamLeaderboard {...{ AOC, form, generateStars, getSchoolColor }} />
+                            <TeamLeaderboard
+                                {...{ AOC, form, generateStars, getSchoolColor, isUserValid }}
+                            />
                         </tbody>
                     </table>
                 </div>
@@ -90,7 +108,7 @@ export default function leaderboard({ AOC, form }) {
                     <h2>Individuals</h2>
                     <table>
                         <tbody>
-                            <IndividualLeaderboard {...{ AOC, form, generateStars }} />
+                            <IndividualLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
                         </tbody>
                     </table>
                 </div>

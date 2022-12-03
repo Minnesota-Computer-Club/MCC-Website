@@ -1,12 +1,12 @@
-import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss'
+import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
 
-export default function IndividualLeaderboard({ AOC, form, generateStars }) {
+export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
     let tableRows = []; //array of table rows with info
     let aocMembers = Object.values(AOC.members); //Convert AOC.members obj into array
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
+        if (!isUserValid(AOCUser)) continue;
         let formUser = form[AOCUser.name]; //grab user's form data
-        if (!formUser) continue; //if the user didnt fill out the form we aren't going to render them on the scoreboard
         /*
             Deconstruct form data
         */

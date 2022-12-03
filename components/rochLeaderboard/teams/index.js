@@ -23,14 +23,14 @@ function mixRGB(rgbs) {
     return [r, g, b];
 }
 
-export default function TeamLeaderboard({ AOC, form, generateStars, getSchoolColor }) {
+export default function TeamLeaderboard({ AOC, form, generateStars, getSchoolColor, isUserValid }) {
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
     let aocMembers = Object.values(AOC.members); //convert AOC.members to a obj
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
+        if (!isUserValid(AOCUser)) continue;
         let formUser = form[AOCUser.name]; //grab aoc user's form submission
-        if (!formUser) continue; //if they haven't filled out the form we aren't going to render them
         /*
             Deconstruct Form Data
         */

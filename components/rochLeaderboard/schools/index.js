@@ -1,12 +1,12 @@
 import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss'
 
-export default function renderSchools({ AOC, form }) {
+export default function renderSchools({ AOC, form, isUserValid }) {
     let schools = {}; //obj containing schoolName: obj leaderboard stats
     let aocMembers = Object.values(AOC.members);
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
+        if (!isUserValid(AOCUser)) continue;
         let formUser = form[AOCUser.name]; //grab the aoc user's form submission
-        if (!formUser) continue; //if they arent in the form go away
         let { ['Which school do you attend?']: school } = formUser; //grab what school they go to
         let { stars } = AOCUser; //grab their stars
         if (!schools[school]) schools[school] = { name: school, stars: 0, players: 0 }; //initialize this school if need be
