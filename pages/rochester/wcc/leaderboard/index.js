@@ -59,6 +59,28 @@ export default function leaderboard({ AOC, form }) {
 
     /*
 
+    calculate team's total stars completed
+
+    */
+    
+    function calcualteTeamStars(teamMembers) {
+        let counted = {}
+        let stars = 0
+        for (let {completion_day_level} of teamMembers) {
+            for (let day of Object.keys(completion_day_level)) {
+                for (let puzzle of Object.keys(completion_day_level[day])) {
+                    if (counted[day] && counted[day][puzzle]) continue; //this star has already been counted
+                    counted[day] = counted[day] || {} //create this day if it has not already been created
+                    counted[day][puzzle] = true // count this puzzle
+                    stars++; // add to star count
+                }
+            }
+        }
+        return stars
+    }
+
+    /*
+
         Add yourself if you contribute!
     
     */
@@ -99,7 +121,7 @@ export default function leaderboard({ AOC, form }) {
                     <table>
                         <tbody>
                             <TeamLeaderboard
-                                {...{ AOC, form, generateStars, getSchoolColor, isUserValid }}
+                                {...{ AOC, form, generateStars, getSchoolColor, isUserValid, calcualteTeamStars }}
                             />
                         </tbody>
                     </table>

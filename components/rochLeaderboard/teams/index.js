@@ -23,7 +23,14 @@ function mixRGB(rgbs) {
     return [r, g, b];
 }
 
-export default function TeamLeaderboard({ AOC, form, generateStars, getSchoolColor, isUserValid }) {
+export default function TeamLeaderboard({
+    AOC,
+    form,
+    generateStars,
+    getSchoolColor,
+    isUserValid,
+    calcualteTeamStars,
+}) {
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
     let aocMembers = Object.values(AOC.members); //convert AOC.members to a obj
@@ -48,7 +55,7 @@ export default function TeamLeaderboard({ AOC, form, generateStars, getSchoolCol
                 username,
         } = formUser;
         if (team != 'Team') continue; //if the user is not in a team we aren't going to render them in the teams leaderboard
-        let { local_score: score, stars } = AOCUser; //deconstruct aoc stats
+        let { local_score: score, stars, completion_day_level } = AOCUser; //deconstruct aoc stats
         if (!teams[teamName]) teams[teamName] = []; //if this user's team does not exist in the obj yet intialize with array
         teams[teamName].push({
             //push this user into their team
@@ -59,6 +66,7 @@ export default function TeamLeaderboard({ AOC, form, generateStars, getSchoolCol
             username,
             score,
             stars,
+            completion_day_level,
         });
     }
     for (let [teamName, members] of Object.entries(teams)) {
@@ -72,7 +80,10 @@ export default function TeamLeaderboard({ AOC, form, generateStars, getSchoolCol
         schools = schools.join('/'); //join schools with / (ex. s/s/s)
         let color = mixRGB(colors); //mix the school colors
         let rank = tableRows.length + 1; //the team's ranking
-        let { score, stars } = members[0]; //this needs to be fixed. currently a team is reperesented by the leader's score
+        let score = members.reduce(function (totalScore, member) {
+            return totalScore + member.score;
+        }, 0);
+        let stars = calcualteTeamStars(members);
         tableRows.push(
             <tr key={rank}>
                 <td>

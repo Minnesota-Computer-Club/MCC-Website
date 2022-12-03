@@ -1,4 +1,4 @@
-import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss'
+import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
 
 export default function renderSchools({ AOC, form, isUserValid }) {
     let schools = {}; //obj containing schoolName: obj leaderboard stats
@@ -6,6 +6,7 @@ export default function renderSchools({ AOC, form, isUserValid }) {
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
+        console.log(AOCUser);
         let formUser = form[AOCUser.name]; //grab the aoc user's form submission
         let { ['Which school do you attend?']: school } = formUser; //grab what school they go to
         let { stars } = AOCUser; //grab their stars
@@ -17,7 +18,8 @@ export default function renderSchools({ AOC, form, isUserValid }) {
 
     let schoolsSorted = Object.values(schools); //convert schools in to an array
 
-    schoolsSorted.sort((a, b) => { //sort the schools by stars
+    schoolsSorted.sort((a, b) => {
+        //sort the schools by stars
         return b.starts - a.stars;
     });
 
@@ -25,7 +27,7 @@ export default function renderSchools({ AOC, form, isUserValid }) {
 
     for (let school of schoolsSorted) {
         let rank = tableRows.length + 1; //this schools leaderboard ranking
-        let cssClassName = school.name.replace(/ /g, '');//remove spaces from school name so it matches its css class
+        let cssClassName = school.name.replace(/ /g, ''); //remove spaces from school name so it matches its css class
         tableRows.push(
             <tr key={rank}>
                 <td>
