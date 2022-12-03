@@ -43,7 +43,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
 
     schoolsSorted.sort((a, b) => {
         //sort the schools by stars
-        return b.starts - a.stars;
+        return b.stars - a.stars;
     });
 
     let tableRows = [];
