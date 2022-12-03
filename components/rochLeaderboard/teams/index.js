@@ -29,7 +29,7 @@ export default function TeamLeaderboard({
     generateStars,
     getSchoolColor,
     isUserValid,
-    calcualteTeamStars,
+    calculateTeamStars,
 }) {
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
@@ -83,7 +83,7 @@ export default function TeamLeaderboard({
         let score = members.reduce(function (totalScore, member) {
             return totalScore + member.score;
         }, 0);
-        let stars = calcualteTeamStars(members);
+        let stars = calculateTeamStars(members);
         tableRows.push(
             <tr key={rank}>
                 <td>

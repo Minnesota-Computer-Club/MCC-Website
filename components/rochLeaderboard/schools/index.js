@@ -1,6 +1,6 @@
 import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
 
-export default function renderSchools({ AOC, form, isUserValid, calcualteTeamStars }) {
+export default function renderSchools({ AOC, form, isUserValid, calculateTeamStars }) {
     let schools = {}; //obj containing schoolName: obj leaderboard stats
     let teams = {}; //obj containing teamName: array team members
     let aocMembers = Object.values(AOC.members);
@@ -28,7 +28,7 @@ export default function renderSchools({ AOC, form, isUserValid, calcualteTeamSta
     //team memebers of each team
     for (let members of Object.values(teams)) {
         let ratio = 1 / members.length;
-        let stars = calcualteTeamStars(members);
+        let stars = calculateTeamStars(members);
         console.group(stars)
         //for each school of the team members
         for (let { school } of members) {
