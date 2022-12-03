@@ -62,21 +62,21 @@ export default function leaderboard({ AOC, form }) {
     calculate team's total stars completed
 
     */
-    
+
     function calcualteTeamStars(teamMembers) {
-        let counted = {}
-        let stars = 0
-        for (let {completion_day_level} of teamMembers) {
+        let counted = {};
+        let stars = 0;
+        for (let { completion_day_level } of teamMembers) {
             for (let day of Object.keys(completion_day_level)) {
                 for (let puzzle of Object.keys(completion_day_level[day])) {
                     if (counted[day] && counted[day][puzzle]) continue; //this star has already been counted
-                    counted[day] = counted[day] || {} //create this day if it has not already been created
-                    counted[day][puzzle] = true // count this puzzle
+                    counted[day] = counted[day] || {}; //create this day if it has not already been created
+                    counted[day][puzzle] = true; // count this puzzle
                     stars++; // add to star count
                 }
             }
         }
-        return stars
+        return stars;
     }
 
     /*
@@ -112,7 +112,9 @@ export default function leaderboard({ AOC, form }) {
                     <h2>Schools</h2>
                     <table>
                         <tbody>
-                            <SchoolLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
+                            <SchoolLeaderboard
+                                {...{ AOC, form, generateStars, isUserValid, calcualteTeamStars }}
+                            />
                         </tbody>
                     </table>
                 </div>
@@ -121,7 +123,14 @@ export default function leaderboard({ AOC, form }) {
                     <table>
                         <tbody>
                             <TeamLeaderboard
-                                {...{ AOC, form, generateStars, getSchoolColor, isUserValid, calcualteTeamStars }}
+                                {...{
+                                    AOC,
+                                    form,
+                                    generateStars,
+                                    getSchoolColor,
+                                    isUserValid,
+                                    calcualteTeamStars,
+                                }}
                             />
                         </tbody>
                     </table>
