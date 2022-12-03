@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from './leaderboard.module.scss';
-import IndividualLeaderboard from '../leaderboard/individuals';
-import TeamLeaderboard from '../leaderboard/teams';
-import SchoolLeaderboard from '../leaderboard/schools';
+import IndividualLeaderboard from '../Leaderboard/individuals';
+import TeamLeaderboard from '../Leaderboard/teams';
+import SchoolLeaderboard from '../Leaderboard/schools';
 import { Nav } from '../Nav/nav';
 
 const MAX_STARS = 25;
