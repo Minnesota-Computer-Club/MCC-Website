@@ -2,8 +2,6 @@ import Leaderboard from '../../../components/leaderboard';
 import { readFile } from 'fs/promises';
 
 export default function RochesterLeaderboard({ AOC, form }) {
-    console.log(AOC);
-
     return <Leaderboard {...{ AOC, form, location: 'Minnesota' }} />;
 }
 
