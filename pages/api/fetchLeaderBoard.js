@@ -18,5 +18,5 @@ export default async function fetchLeaderBoard(req, res) {
     last = Date.now() + 15 * 60 * 1000;
     // 15 mins > 60 seconds in a min > 1000 ms in a second
 
-    res.send(200).json(cached);
+    res.send(200).json(cahed);
 }

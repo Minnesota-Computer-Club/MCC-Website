@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './wwc.module.scss';
 
 export default function WCC() {
@@ -87,15 +86,15 @@ export default function WCC() {
                 <div className={styles.sponsors}>
                     <h1>Thank you to our prize sponsors!</h1>
                     <div className={styles.logos}>
-                        <img src="/flap.png" alt='flapdoodles' width={500} />
-                        <img src="/newspin.png" alt='new spin' width={500} />
-                        <img src="/newts.png" alt='newts' width={500} />
-                        <img src="/pi.png" alt='pi' width={500} />
-                        <img src="/rctc.png" alt='rctc' width={500} />
-                        <img src="/sarg.png" alt='sarg' width={500} />
-                        <img src="/winona.png" alt='winona' width={500} />
-                        <img className={styles.blacklogo} src="/ibm.svg" alt='ibm' />
-                        <img className={styles.blacklogo} src="/mc.svg" alt='mc' />
+                        <img src="/flap.png" />
+                        <img src="/newspin.png" />
+                        <img src="/newts.png" />
+                        <img src="/pi.png" />
+                        <img src="/rctc.png" />
+                        <img src="/sarg.png" />
+                        <img src="/winona.png" />
+                        <img className={styles.blacklogo} src="/ibm.svg" />
+                        <img className={styles.blacklogo} src="/mc.svg" />
                     </div>
                     <i>
                         If your business would like to donate a prize and be listed on our site and
