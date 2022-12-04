@@ -1,8 +1,13 @@
+import Head from 'next/head';
+import { Nav } from '../../../components/landingPage/Nav/nav';
 import Leaderboard from '../../../components/leaderboard';
 import { readFile } from 'fs/promises';
 
 export default function RochesterLeaderboard({ AOC, form }) {
-    return <Leaderboard {...{ AOC, form, location: 'Minnesota' }} />;
+    return <>
+        <Nav />
+        <Leaderboard {...{ AOC, form, location: 'Minnesota' }} />
+    </>;
 }
 
 async function fetchLeaderboard(id) {

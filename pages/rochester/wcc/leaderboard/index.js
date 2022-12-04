@@ -1,5 +1,6 @@
 import Leaderboard from '../../../../components/leaderboard';
 import { readFile } from 'fs/promises';
+import { Nav } from '../../../../components/landingPage/Nav/nav';
 
 export default function RochesterLeaderboard({ AOC, form }) {
     return <Leaderboard {...{ AOC, form, location: 'Rochester' }} />;

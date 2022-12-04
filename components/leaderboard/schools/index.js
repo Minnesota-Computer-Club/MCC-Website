@@ -62,7 +62,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                     </p>
                 </td>
                 <td>
-                    <p className={colorStyles[cssClassName]}>Stars: </p>
+                    <p className={colorStyles[cssClassName] + " " + styles.hide}>Stars: </p>
                 </td>
                 <td>
                     <p className={colorStyles[cssClassName]} style={{ textAlign: 'end' }}>

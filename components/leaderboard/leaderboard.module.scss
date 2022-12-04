@@ -38,3 +38,14 @@
         }
     }
 }
+
+.goldStars {
+    color: #ffff66;
+}
+.silverStar {
+    color: #9999cc;
+}
+.incompleteStars {
+    color: transparent;
+    user-select: none;
+}
