@@ -50,7 +50,8 @@
     user-select: none;
 }
 
-.table {
+.scrollTable {
     overflow: auto;
-    margin-left: 50px;
+    width: 95vw;
+    position: relative;
 }
