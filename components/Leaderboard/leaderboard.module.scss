@@ -23,6 +23,12 @@
         }
         > div {
             overflow: auto;
+            @media screen and (max-width: 600px) {
+                > & {
+                    width: 95vw;
+                    position: relative;
+                }
+            }
         }
         .stars {
             text-align: center;
@@ -51,12 +57,4 @@
 .incompleteStars {
     color: transparent;
     user-select: none;
-}
-
-@media screen and (max-width: 600px) {
-    .scrollTable {
-        overflow: auto;
-        width: 95vw;
-        position: relative;
-    }
 }
