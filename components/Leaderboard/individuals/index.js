@@ -2,9 +2,10 @@ import coloredStyles from '../schoolColors.module.scss';
 import lbStyles from '../leaderboard.module.scss';
 import styles from '../styles.module.scss';
 
-export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
+export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid, regenLocalScores }) {
     let tableRows = []; //array of table rows with info
     let aocMembers = Object.values(AOC); //Convert AOC.members obj into array
+    aocMembers = regenLocalScores(aocMembers)
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
