@@ -1,4 +1,5 @@
 import coloredStyles from '../schoolColors.module.scss';
+import lbStyles from '../leaderboard.module.scss';
 import styles from '../styles.module.scss';
 
 export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
@@ -28,9 +29,7 @@ export default function IndividualLeaderboard({ AOC, form, generateStars, isUser
                 <td>
                     <p>{score} </p>
                 </td>
-                <td className={styles.mobile + ' ' + coloredStyles[school.replace(/ /g, '')]}>
-                    {stars}★{' '}
-                </td>
+                <td className={styles.mobile + " " + ((stars % 2 == 0) ? lbStyles.goldStars : lbStyles.silverStar)}>{stars}★ </td>
                 <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
                     <p className={coloredStyles[school.replace(/ /g, '')] + ' ' + styles.shorten}>

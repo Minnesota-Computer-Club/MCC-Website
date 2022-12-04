@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import styles from './leaderboard.module.scss';
-import IndividualLeaderboard from '../Leaderboard/individuals';
-import TeamLeaderboard from '../Leaderboard/teams';
-import SchoolLeaderboard from '../Leaderboard/schools';
-import { Nav } from '../Nav/nav';
+import IndividualLeaderboard from '../leaderboard/individuals';
+import TeamLeaderboard from '../leaderboard/teams';
+import SchoolLeaderboard from '../leaderboard/schools';
+import { Nav } from '../landingPage/Nav/nav';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -15,6 +15,8 @@ const SCHOOLTOCOLOR = {
     ctech: 'ffc01f',
     kellogg: '0d78bb',
     ['willow creek']: 'ffc01f',
+    individual: '808080',
+    ['prior lake']: '1d3c66',
 };
 
 export default function Leaderboard({ AOC, form, location }) {
@@ -23,9 +25,7 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
     Generates the star elements! lol
-
     */
 
     function generateStars(starCount) {
@@ -42,9 +42,7 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
     Should this user be render & counted in stats?
-
     */
 
     function isUserValid(aocUser) {
@@ -56,9 +54,7 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
     calculate team's total stars completed
-
     */
 
     function calculateTeamStars(teamMembers) {
@@ -78,7 +74,6 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
         Add yourself if you contribute!
     
     */
