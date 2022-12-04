@@ -3,7 +3,7 @@
     Color mixing functions
 
 */
-import lbStyles from '../../../pages/rochester/wcc/leaderboard/leaderboard.module.scss';
+import lbStyles from '../leaderboard.module.scss';
 import styles from "../styles.module.scss";
 
 function hexToRGB(hex) {

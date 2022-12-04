@@ -1,5 +1,5 @@
-import coloredStyles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
-import lbStyles from '../../../pages/rochester/wcc/leaderboard/leaderboard.module.scss';
+import coloredStyles from '../schoolColors.module.scss';
+import lbStyles from '../leaderboard.module.scss';
 import styles from '../styles.module.scss';
 
 export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
