@@ -50,8 +50,10 @@
     user-select: none;
 }
 
-.scrollTable {
-    overflow: auto;
-    width: 95vw;
-    position: relative;
+@media screen and (max-width: 600px) {
+    .scrollTable {
+        overflow: auto;
+        width: 95vw;
+        position: relative;
+    }
 }
