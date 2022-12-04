@@ -23,7 +23,7 @@ export default function IndividualLeaderboard({ AOC, form, generateStars, isUser
 
         let rank = tableRows.length + 1; //user's leaderboard ranking
         tableRows.push(
-            <tr key={rank}>
+            <tr key={rank} className={styles.rows}>
                 <td>
                     <p>{rank}) </p>
                 </td>

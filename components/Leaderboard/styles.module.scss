@@ -17,3 +17,12 @@
     display: none;
   }
 }
+
+.table {
+  border-collapse: collapse;
+}
+
+.rows:hover {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
