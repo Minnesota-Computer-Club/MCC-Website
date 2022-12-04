@@ -35,7 +35,7 @@ export default function TeamLeaderboard({
 }) {
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
-    let aocMembers = Object.values(AOC.members); //convert AOC.members to a obj
+    let aocMembers = Object.values(AOC); //convert AOC.members to a obj
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
