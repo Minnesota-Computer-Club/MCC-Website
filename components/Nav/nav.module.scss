@@ -1,0 +1,105 @@
+$darkpurple: #7060A9;
+
+.headerComponentWrapper {
+  color: white;
+  border-bottom: 1px white solid;
+
+  nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem;
+    overflow: auto;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+    }
+
+    a {
+      img {
+          max-width: 5rem;
+          max-height: 5rem;
+      }
+    }
+  }
+
+  .navSiteTitle {
+    a {
+      color: white;
+      font-weight: normal;
+    }
+
+    @media (min-width: 640px) {
+      max-width: 16rem;
+    }
+  }
+
+  .navItemWrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    float: center;
+    font-weight: bold;
+    justify-content: space-between;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      float: right;
+    }
+
+    .navItem {
+      border: solid;
+      border-color: white;
+      border-width: 1px;
+      border-radius: 0.25rem;
+      color: white;
+      display: inline-block;
+      font-size: 0.875rem;
+      line-height: 1;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        background-color: white;
+        border-color: transparent;
+        color: $darkpurple;
+      }
+
+      @media (min-width: 680px) {
+        margin-top: 0rem;
+      }
+    }
+
+    .navItemCTA {
+      background-color: $darkpurple;
+      border: solid;
+      border-color: $darkpurple;
+      border-width: 1px;
+      border-radius: 0.25rem;
+      color: white;
+      display: inline-block;
+      font-size: 0.875rem;
+      line-height: 1;
+      margin-left: 1rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: white;
+        border-color: transparent;
+        color: $darkpurple;
+      }
+
+      @media (min-width: 680px) {
+        margin-top: 0rem;
+      }
+    }
+  }
+}

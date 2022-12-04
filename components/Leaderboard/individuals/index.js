@@ -1,8 +1,9 @@
-import styles from '../../../pages/rochester/wcc/leaderboard/schoolColors.module.scss';
+import coloredStyles from '../schoolColors.module.scss';
+import styles from '../styles.module.scss';
 
 export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid }) {
     let tableRows = []; //array of table rows with info
-    let aocMembers = Object.values(AOC.members); //Convert AOC.members obj into array
+    let aocMembers = Object.values(AOC); //Convert AOC.members obj into array
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
@@ -27,12 +28,17 @@ export default function IndividualLeaderboard({ AOC, form, generateStars, isUser
                 <td>
                     <p>{score} </p>
                 </td>
-                <td>{generateStars(stars)}</td>
+                <td className={styles.mobile + ' ' + coloredStyles[school.replace(/ /g, '')]}>
+                    {stars}★{' '}
+                </td>
+                <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
-                    <p className={styles[school.replace(/ /g, '')]}>{name} </p>
+                    <p className={coloredStyles[school.replace(/ /g, '')] + ' ' + styles.shorten}>
+                        {name}{' '}
+                    </p>
                 </td>
                 <td>
-                    <p className={styles[school.replace(/ /g, '')]}>({school})</p>
+                    <p className={coloredStyles[school.replace(/ /g, '')]}>({school})</p>
                 </td>
             </tr>
         );

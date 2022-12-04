@@ -1,18 +1,22 @@
 import Head from 'next/head';
-import { Nav } from '../../components/Landing Page/Nav/nav';
+import { Nav } from '../../components/Nav/nav';
 import styles from './wwc.module.scss';
+import Link from 'next/link';
 
 export default function WCC() {
     return (
         <>
             <Head>
-                <title>MN Computer Club Winter Coding Comptetition</title>
+                <title>MN Computer Club Winter Coding Competition</title>
             </Head>
 
             <Nav />
 
             <div className={styles.wcc}>
-                <h1>Minnesota Computer Club Winter Coding Comptetition</h1>
+                <h1>Minnesota Computer Club Winter Coding Competition</h1>
+                <h2>
+                    <Link href="/wcc/leaderboard">View the leaderboard</Link>
+                </h2>
                 <p>
                     Every December, the Minnesota Computer Club hosts a programming competition for
                     all middle and high school students.
@@ -80,7 +84,8 @@ export default function WCC() {
                 <h1>How to participate</h1>
                 <p>
                     To participate, please fill out{' '}
-                    <a href="https://forms.gle/1hFTUsLNribKy9fm6">this google form</a>. <i>(required)</i>
+                    <a href="https://forms.gle/1hFTUsLNribKy9fm6">this google form</a>.{' '}
+                    <i>(required)</i>
                     <br />
                     <br />
                     Want to chat with other participants? Want to find a team? You will need to go
