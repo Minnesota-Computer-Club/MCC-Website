@@ -52,3 +52,9 @@
     color: transparent;
     user-select: none;
 }
+
+.scrollTable {
+    overflow: auto;
+    width: 95vw;
+    position: relative;
+}
