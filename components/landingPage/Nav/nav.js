@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from "react";
+import Image from 'next/image';
 
 import styles from './nav.module.scss';
 
@@ -8,7 +9,7 @@ export const Nav = () => {
     <header className={styles.headerComponentWrapper}>
       <nav>
         <div className={styles.navSiteTitle}>
-          <Link href="/"><img src="/mn-computer-club-round.png" alt="Minnesota Computer Club Logo" width='500' height='500'></img></Link>
+          <Link href="/"><Image src="/mn-computer-club-round.png" alt="Minnesota Computer Club Logo" width='500' height='500' /></Link>
         </div>
         <div className={styles.navItemWrapper}>
           <div>

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { Nav } from '../../../components/landingPage/Nav/nav';
+import { Sponsors } from '../../../components/Sponsors/Sponsors';
 import styles from './wwc.module.scss';
 
 export default function WCC() {
@@ -100,17 +101,7 @@ export default function WCC() {
                 </p>
                 <div className={styles.sponsors}>
                     <h1>Thank you to our prize sponsors!</h1>
-                    <div className={styles.logos}>
-                        <img src="/flap.png" />
-                        <img src="/newspin.png" />
-                        <img src="/newts.png" />
-                        <img src="/pi.png" />
-                        <img src="/rctc.png" />
-                        <img src="/sarg.png" />
-                        <img src="/winona.png" />
-                        <img className={styles.blacklogo} src="/ibm.svg" />
-                        <img className={styles.blacklogo} src="/mc.svg" />
-                    </div>
+                    <Sponsors />
                     <i>
                         If your business would like to donate a prize and be listed on our site and
                         t-shirts, please email{' '}
