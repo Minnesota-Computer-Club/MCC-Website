@@ -52,7 +52,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
         let rank = tableRows.length + 1; //this schools leaderboard ranking
         let cssClassName = school.name.replace(/ /g, ''); //remove spaces from school name so it matches its css class
         tableRows.push(
-            <tr key={rank}>
+            <tr key={rank} className={styles.rows}>
                 <td>
                     <p className={colorStyles[cssClassName]}>{rank}) </p>
                 </td>
