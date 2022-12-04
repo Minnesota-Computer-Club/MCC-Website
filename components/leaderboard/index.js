@@ -15,6 +15,8 @@ const SCHOOLTOCOLOR = {
     ctech: 'ffc01f',
     kellogg: '0d78bb',
     ['willow creek']: 'ffc01f',
+    individual: '808080',
+    ['prior lake']: '1d3c66',
 };
 
 export default function Leaderboard({ AOC, form, location }) {
