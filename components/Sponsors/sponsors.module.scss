@@ -1,0 +1,21 @@
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > * {
+        max-height: 50px;
+        flex-shrink: 0;
+        margin: 20px;
+        box-sizing: initial;
+    }
+    
+    > svg {
+        height: 50px;
+    }
+}
+
+.blacklogo {
+    background: white;
+    padding: 5px;
+}

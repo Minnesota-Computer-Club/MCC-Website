@@ -1,4 +1,4 @@
-import Leaderboard from '../../../../components/leaderboard';
+import Leaderboard from '../../../../components/Leaderboard';
 import { readFile } from 'fs/promises';
 import { Nav } from '../../../../components/landingPage/Nav/nav';
 

@@ -3,7 +3,6 @@ import styles from './index.module.scss';
 import Footer from '../components/landingPage/Footer/footer';
 import { Nav } from '../components/landingPage/Nav/nav';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 

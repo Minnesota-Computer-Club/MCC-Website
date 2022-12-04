@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from './leaderboard.module.scss';
-import IndividualLeaderboard from '../leaderboard/individuals';
-import TeamLeaderboard from '../leaderboard/teams';
-import SchoolLeaderboard from '../leaderboard/schools';
+import IndividualLeaderboard from './individuals';
+import TeamLeaderboard from './teams';
+import SchoolLeaderboard from './schools';
 import { Nav } from '../landingPage/Nav/nav';
 
 const MAX_STARS = 25;
@@ -25,9 +25,7 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
     Generates the star elements! lol
-
     */
 
     function generateStars(starCount) {
@@ -44,9 +42,7 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
     Should this user be render & counted in stats?
-
     */
 
     function isUserValid(aocUser) {
@@ -58,9 +54,7 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
     calculate team's total stars completed
-
     */
 
     function calculateTeamStars(teamMembers) {
@@ -80,7 +74,6 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
-
         Add yourself if you contribute!
     
     */
@@ -111,38 +104,44 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
-                    <table>
-                        <tbody>
-                            <SchoolLeaderboard
-                                {...{ AOC, form, generateStars, isUserValid, calculateTeamStars }}
-                            />
-                        </tbody>
-                    </table>
+                    <div className={styles.table}>
+                        <table className={styles.table}>
+                            <tbody>
+                                <SchoolLeaderboard
+                                    {...{ AOC, form, generateStars, isUserValid, calculateTeamStars }}
+                                />
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className={styles.section}>
                     <h2>Teams</h2>
-                    <table>
-                        <tbody>
-                            <TeamLeaderboard
-                                {...{
-                                    AOC,
-                                    form,
-                                    generateStars,
-                                    getSchoolColor,
-                                    isUserValid,
-                                    calculateTeamStars,
-                                }}
-                            />
-                        </tbody>
-                    </table>
+                    <div className={styles.table}>
+                        <table>
+                            <tbody>
+                                <TeamLeaderboard
+                                    {...{
+                                        AOC,
+                                        form,
+                                        generateStars,
+                                        getSchoolColor,
+                                        isUserValid,
+                                        calculateTeamStars,
+                                    }}
+                                />
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className={styles.section}>
                     <h2>Individuals</h2>
-                    <table>
-                        <tbody>
-                            <IndividualLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
-                        </tbody>
-                    </table>
+                    <div className={styles.table}>
+                        <table>
+                            <tbody>
+                                <IndividualLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </>
