@@ -104,38 +104,44 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
-                    <table>
-                        <tbody>
-                            <SchoolLeaderboard
-                                {...{ AOC, form, generateStars, isUserValid, calculateTeamStars }}
-                            />
-                        </tbody>
-                    </table>
+                    <div className={styles.table}>
+                        <table className={styles.table}>
+                            <tbody>
+                                <SchoolLeaderboard
+                                    {...{ AOC, form, generateStars, isUserValid, calculateTeamStars }}
+                                />
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className={styles.section}>
                     <h2>Teams</h2>
-                    <table>
-                        <tbody>
-                            <TeamLeaderboard
-                                {...{
-                                    AOC,
-                                    form,
-                                    generateStars,
-                                    getSchoolColor,
-                                    isUserValid,
-                                    calculateTeamStars,
-                                }}
-                            />
-                        </tbody>
-                    </table>
+                    <div className={styles.table}>
+                        <table>
+                            <tbody>
+                                <TeamLeaderboard
+                                    {...{
+                                        AOC,
+                                        form,
+                                        generateStars,
+                                        getSchoolColor,
+                                        isUserValid,
+                                        calculateTeamStars,
+                                    }}
+                                />
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div className={styles.section}>
                     <h2>Individuals</h2>
-                    <table>
-                        <tbody>
-                            <IndividualLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
-                        </tbody>
-                    </table>
+                    <div className={styles.table}>
+                        <table>
+                            <tbody>
+                                <IndividualLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </>
