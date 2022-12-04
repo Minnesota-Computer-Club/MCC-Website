@@ -108,7 +108,13 @@ export default function Leaderboard({ AOC, form, location }) {
                         <table>
                             <tbody>
                                 <SchoolLeaderboard
-                                    {...{ AOC, form, generateStars, isUserValid, calculateTeamStars }}
+                                    {...{
+                                        AOC,
+                                        form,
+                                        generateStars,
+                                        isUserValid,
+                                        calculateTeamStars,
+                                    }}
                                 />
                             </tbody>
                         </table>
@@ -138,7 +144,9 @@ export default function Leaderboard({ AOC, form, location }) {
                     <div className={styles.scrollTable}>
                         <table>
                             <tbody>
-                                <IndividualLeaderboard {...{ AOC, form, generateStars, isUserValid }} />
+                                <IndividualLeaderboard
+                                    {...{ AOC, form, generateStars, isUserValid }}
+                                />
                             </tbody>
                         </table>
                     </div>

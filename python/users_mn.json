@@ -246,5 +246,13 @@
     "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Sam Geng",
     "If you are participating in the MCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/npuWmAu7t7  - Please enter your Discord username so we can verify you.": "StandingAbove",
     "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "Java"
+  },
+  "Michael McCright": {
+    "Timestamp": "12/3/2022 17:30:02",
+    "What is your first and last name?": "Michael McCright",
+    "Which school do you attend?": "Century",
+    "What is your Advent of Code Username? (Make sure you are logged in to see it!)": "Michael McCright",
+    "If you are participating in the MCC Discord server, you will be automatically added to specific channels when you complete stars. You can join here: https://discord.gg/npuWmAu7t7  - Please enter your Discord username so we can verify you.": "",
+    "Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)": "C++/other"
   }
 }

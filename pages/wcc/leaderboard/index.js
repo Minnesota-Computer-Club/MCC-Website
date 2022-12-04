@@ -1,11 +1,8 @@
-import Head from 'next/head';
-import { Nav } from '../../../components/landingPage/Nav/nav';
 import Leaderboard from '../../../components/Leaderboard';
 import { readFile } from 'fs/promises';
 
 export default function RochesterLeaderboard({ AOC, form }) {
     return <>
-        <Nav />
         <Leaderboard {...{ AOC, form, location: 'Minnesota' }} />
     </>;
 }

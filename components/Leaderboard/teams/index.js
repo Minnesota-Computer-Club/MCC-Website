@@ -87,7 +87,7 @@ export default function TeamLeaderboard({
         }, 0);
         let stars = calculateTeamStars(members);
         tableRows.push(
-            <tr key={rank}>
+            <tr key={rank} className={styles.rows}>
                 <td>
                     <p>{rank}) </p>
                 </td>

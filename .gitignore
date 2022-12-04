@@ -43,4 +43,5 @@ yarn-error.log*
 next-env.d.ts
 
 # User json files
-/python/*.json
+/python/users_mn.json
+/python/users_roch.json
