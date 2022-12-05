@@ -55,7 +55,6 @@ const Countdown = props => {
 
     return () => clearTimeout(timer);
   });
-  // }, [props.startDate, props.endDate, props.dateOptions]);
 
   return (
     <div className={styles.countdownWrapper}>
