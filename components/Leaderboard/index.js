@@ -130,7 +130,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
-                    <div>
+                    <div className={styles.scrollTable}>
                         <table>
                             <tbody>
                                 <SchoolLeaderboard
