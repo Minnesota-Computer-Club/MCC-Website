@@ -32,6 +32,7 @@ export default function TeamLeaderboard({
     getSchoolColor,
     isUserValid,
     calculateTeamStars,
+    regenLocalScores
 }) {
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
