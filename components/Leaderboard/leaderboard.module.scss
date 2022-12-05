@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h1 {
         font-size: 1em;
         font-weight: bolder;
         color: rgb(117, 193, 255);
         text-shadow: 0 0 8px #000;
     }
+
     .section {
         margin-top: 1.5vh;
         display: flex;
@@ -16,21 +18,43 @@
         align-items: flex-start;
         margin: 16px 0;
         white-space: pre;
-        > h2 {
+
+        >h2 {
             font-size: 1em;
             font-weight: bolder;
             margin: 8px 0;
         }
+
+        div>table {
+            border-collapse: collapse;
+
+            tr {
+                > td {
+                    padding: 2px;
+                }
+
+                transition: background 0.2s;
+                padding: 2px;
+            }
+
+            tr:hover {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+
         .stars {
             text-align: center;
             display: flex;
             align-items: center;
+
             .goldStars {
                 color: #ffff66;
             }
+
             .silverStar {
                 color: #9999cc;
             }
+
             .incompleteStars {
                 color: transparent;
                 user-select: none;
@@ -42,9 +66,11 @@
 .goldStars {
     color: #ffff66;
 }
+
 .silverStar {
     color: #9999cc;
 }
+
 .incompleteStars {
     color: transparent;
     user-select: none;
