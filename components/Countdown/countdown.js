@@ -46,7 +46,9 @@ const Countdown = props => {
 
   useEffect(() => {
     setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
-
+  }, [props.startDate, props.endDate, props.dateOptions]);
+  
+  useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
     }, 1000);
