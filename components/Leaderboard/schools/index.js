@@ -65,7 +65,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                     <p className={colorStyles[cssClassName] + ' ' + styles.hide}>Stars: </p>
                 </td>
                 <td>
-                    <p className={colorStyles[cssClassName]} style={{ textAlign: 'start' }}>
+                    <p className={colorStyles[cssClassName]} >
                         {Math.round(school.stars * 10) / 10} ★
                     </p>
                 </td>
