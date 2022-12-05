@@ -99,16 +99,17 @@ export default function Leaderboard({ AOC, form, location }) {
 
             <Nav />
 
-            <div className={styles.countdownRowWrapper}>
-                <div><Countdown prefix='Next Puzzle Unlocks In' endDate={addSeconds(startOfTomorrow(), 1)} repeatUntil={fromUnixTime(1671926400)} endMessage='Advent of Code 2022 has ended.' /></div>
-                <div><Countdown prefix='Competition Ends In' endDate={fromUnixTime(1672552800)} endMessage='The competition has ended.'/></div>
-            </div>
+
 
             <div className={styles.leaderboard}>
                 <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
                 <div className={styles.section}>
                     <h2>Statistics</h2>
                     <div></div>
+                    <div className={styles.countdownRowWrapper}>
+                        <div><Countdown prefix='Next Puzzle Unlocks In' endDate={addSeconds(startOfTomorrow(), 1)} repeatUntil={fromUnixTime(1671926400)} endMessage='Advent of Code 2022 has ended.' /></div>
+                        <div><Countdown prefix='Competition Ends In' endDate={fromUnixTime(1672552801)} endMessage='The competition has ended.'/></div>
+                    </div>
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>

@@ -4,21 +4,21 @@ import { intervalToDuration, isWithinInterval, startOfTomorrow } from 'date-fns'
 import styles from './countdown.module.scss';
 
 const defaultRemainingTime = {
-  years: 0,
-  months: 0,
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0
+  years: -1,
+  months: -1,
+  days: -1,
+  hours: -1,
+  minutes: -1,
+  seconds: -1
 }
 
 const suffixesForCountdown = {
-  years: 'year(s)',
-  months: 'month(s)',
-  days: 'day(s)',
-  hours: 'hour(s)',
-  minutes: 'minute(s)',
-  seconds: 'second(s)'
+  years: 'y(s)',
+  months: 'm(s)',
+  days: 'd(s)',
+  hours: 'h(s)',
+  minutes: 'm(s)',
+  seconds: 's(s)'
 }
 
 const timeBetweenDates = (startDate, endDate, options) => {
@@ -61,7 +61,7 @@ const Countdown = (props) => {
       {
         countdownIsValid(props.startDate || new Date(), props.repeatUntil || props.endDate || new Date()) ?
           Object.keys(timeLeft).map(key => (
-            timeLeft[key] !== 0 ? 
+            timeLeft[key] !== -1 && (timeLeft[key] !== 0 || key == 'seconds')? 
               <>
                 <span>{timeLeft[key]}</span> <span>{suffixesForCountdown[key]}</span>{key !== 'seconds' ? <span>{props.dateSeparator || ', '}</span> : <span></span> }
               </>

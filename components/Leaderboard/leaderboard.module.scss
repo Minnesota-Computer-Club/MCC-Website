@@ -21,6 +21,19 @@
             font-weight: bolder;
             margin: 8px 0;
         }
+
+        .countdownRowWrapper {
+            white-space: normal !important;
+        
+            div {
+                @media screen and (max-width: 600px) {
+                    .countdownWrapper {
+                        max-width: 16rem;
+                    }
+                }
+            }
+        }
+
         .stars {
             text-align: center;
             display: flex;
@@ -55,14 +68,5 @@
         overflow: auto;
         width: 95vw;
         position: relative;
-    }
-}
-
-.countdownRowWrapper {
-    display: flex;
-    justify-content: space-between;
-
-    div {
-        max-width: 24rem;
     }
 }
