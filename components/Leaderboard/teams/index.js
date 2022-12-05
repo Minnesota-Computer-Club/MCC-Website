@@ -4,7 +4,7 @@
 
 */
 import lbStyles from '../leaderboard.module.scss';
-import styles from "../styles.module.scss";
+import styles from '../styles.module.scss';
 
 function hexToRGB(hex) {
     let aRgbHex = hex.match(/.{1,2}/g);
@@ -36,6 +36,7 @@ export default function TeamLeaderboard({
     let tableRows = []; //array of table row elements
     let teams = {}; // obj teamName: array members
     let aocMembers = Object.values(AOC); //convert AOC.members to a obj
+    aocMembers = regenLocalScores(aocMembers);
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
@@ -94,7 +95,15 @@ export default function TeamLeaderboard({
                 <td>
                     <p>{score} </p>
                 </td>
-                <td className={styles.mobile + " " + (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)}>{stars}★ </td>
+                <td
+                    className={
+                        styles.mobile +
+                        ' ' +
+                        (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
+                    }
+                >
+                    {stars}★{' '}
+                </td>
                 <td className={styles.hide}>{generateStars(stars)}</td>
                 <td>
                     <p
