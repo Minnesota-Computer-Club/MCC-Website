@@ -21,7 +21,6 @@
             font-weight: bolder;
             margin: 8px 0;
         }
-
         .countdownRowWrapper {
             white-space: normal !important;
         
@@ -33,7 +32,9 @@
                 }
             }
         }
-
+        > div {
+            text-align: end;
+        }
         .stars {
             text-align: center;
             display: flex;

@@ -62,10 +62,10 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                     </p>
                 </td>
                 <td>
-                    <p className={colorStyles[cssClassName] + " " + styles.hide}>Stars: </p>
+                    <p className={colorStyles[cssClassName] + ' ' + styles.hide}>Stars: </p>
                 </td>
                 <td>
-                    <p className={colorStyles[cssClassName]} style={{ textAlign: 'end' }}>
+                    <p className={colorStyles[cssClassName]} >
                         {Math.round(school.stars * 10) / 10} ★
                     </p>
                 </td>
@@ -73,7 +73,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                     <p className={colorStyles[cssClassName]}>Total Participants: </p>
                 </td>
                 <td className={styles.hide}>
-                    <p className={colorStyles[cssClassName]} style={{ textAlign: 'end' }}>
+                    <p className={colorStyles[cssClassName]}>
                         {Math.round(school.players * 10) / 10}{' '}
                     </p>
                 </td>
@@ -81,7 +81,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                     <p className={colorStyles[cssClassName]}>Efficiency: </p>
                 </td>
                 <td className={styles.hide}>
-                    <p className={colorStyles[cssClassName]} style={{ textAlign: 'end' }}>{school.efficiency.toFixed(1)}</p>
+                    <p className={colorStyles[cssClassName]}>{school.efficiency.toFixed(1)}</p>
                 </td>
             </tr>
         );
