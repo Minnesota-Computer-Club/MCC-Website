@@ -101,9 +101,8 @@ export default function Leaderboard({ AOC, form, location }) {
 
             <div className={styles.leaderboard}>
                 <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
-                <div className={styles.section}>
+                <div className={styles.section + " " + styles.stats}>
                     <h2>Statistics</h2>
-                    <div></div>
                     <div className={styles.countdownRowWrapper} style={{ textAlign: 'start' }}>
                         <div>
                             <Countdown
