@@ -11,7 +11,14 @@ div .countdownPrefix {
 .other {
   color: rgb(117, 193, 255);
 }
+.countdownWrapper {
+  padding: 0.25rem;
+  padding-left: 0;
+}
 
 .time {
   color: rgb(223, 187, 110);
+}
+div .countdownPrefix {
+  font-weight: bold;
 }
