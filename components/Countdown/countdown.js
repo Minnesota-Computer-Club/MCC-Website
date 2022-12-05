@@ -46,12 +46,14 @@ const Countdown = (props) => {
   const [timeLeft, setTimeLeft] = useState(defaultRemainingTime);
 
   useEffect(() => {
+    setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
+
     const timer = setTimeout(() => {
       setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
     }, 1000);
 
     return () => clearTimeout(timer);
-  });
+  }, [props.startDate, props.endDate, props.dateOptions]);
 
   return (
     <div className={styles.countdownWrapper}>
