@@ -58,3 +58,12 @@
     color: transparent;
     user-select: none;
 }
+
+.countdownRowWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        max-width: 24rem;
+    }
+}

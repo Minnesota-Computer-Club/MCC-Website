@@ -4,6 +4,9 @@ import IndividualLeaderboard from './individuals';
 import TeamLeaderboard from './teams';
 import SchoolLeaderboard from './schools';
 import { Nav } from '../landingPage/Nav/nav';
+import Countdown from '../Countdown/countdown';
+
+import { addSeconds, fromUnixTime, startOfTomorrow } from 'date-fns';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -95,6 +98,11 @@ export default function Leaderboard({ AOC, form, location }) {
             </Head>
 
             <Nav />
+
+            <div className={styles.countdownRowWrapper}>
+                <div><Countdown prefix='Next Puzzle Unlocks In' endDate={addSeconds(startOfTomorrow(), 1)} repeatUntil={fromUnixTime(1671926400)} endMessage='Advent of Code 2022 has ended.' /></div>
+                <div><Countdown prefix='Competition Ends In' endDate={fromUnixTime(1672552800)} endMessage='The competition has ended.'/></div>
+            </div>
 
             <div className={styles.leaderboard}>
                 <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
