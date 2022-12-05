@@ -43,7 +43,7 @@ const countdownIsValid = (startDate, endDate) => {
 
 const Countdown = (props) => {
 
-  const [timeLeft, setTimeLeft] = useState(defaultRemainingTime);
+  const [timeLeft, setTimeLeft] = useState(defaultRemainingTime );
 
   useEffect(() => {
     setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
