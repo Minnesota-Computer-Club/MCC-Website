@@ -42,6 +42,20 @@
             }
         }
 
+        .countdownRowWrapper {
+            white-space: normal !important;
+        
+            div {
+                @media screen and (max-width: 600px) {
+                    .countdownWrapper {
+                        max-width: 16rem;
+                    }
+                }
+            }
+        }
+        > div {
+            text-align: end;
+        }
         .stars {
             text-align: center;
             display: flex;
