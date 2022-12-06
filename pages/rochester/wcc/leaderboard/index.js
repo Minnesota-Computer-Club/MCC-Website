@@ -1,6 +1,5 @@
 import Leaderboard from '../../../../components/Leaderboard';
 import { readFile } from 'fs/promises';
-import { Nav } from '../../../../components/landingPage/Nav/nav';
 
 export default function RochesterLeaderboard({ AOC, form }) {
     return <Leaderboard {...{ AOC, form, location: 'Rochester' }} />;
@@ -37,7 +36,7 @@ export async function getServerSideProps() {
     }
 
     try {
-        //try to grab production file
+        // try to grab production file
         let formData = await readFile('./python/users_roch.json', { encoding: 'utf-8' });
         formData = JSON.parse(formData);
         cached.form = formData;
