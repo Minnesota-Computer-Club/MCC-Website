@@ -105,9 +105,6 @@ export default function Leaderboard({ AOC, form, location }) {
             })
         );
 
-        console.log(new_localscores);
-        console.log(users);
-
         return users.map((u) =>
             new_localscores.has(u.name) ? { ...u, local_score: new_localscores.get(u.name) } : u
         );
