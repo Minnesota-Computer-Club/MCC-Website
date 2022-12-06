@@ -4,5 +4,13 @@
 }
 
 div .countdownPrefix {
+  text-shadow: 0 0 4px rgb(255 255 255 / 75%);
+}
+
+.time {
+  color: rgb(117, 193, 255);
+}
+
+.other {
   font-weight: bold;
 }

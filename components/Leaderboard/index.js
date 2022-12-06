@@ -105,9 +105,6 @@ export default function Leaderboard({ AOC, form, location }) {
             })
         );
 
-        console.log(new_localscores);
-        console.log(users);
-
         return users.map((u) =>
             new_localscores.has(u.name) ? { ...u, local_score: new_localscores.get(u.name) } : u
         );
@@ -158,9 +155,8 @@ export default function Leaderboard({ AOC, form, location }) {
 
             <div className={styles.leaderboard}>
                 <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
-                <div className={styles.section}>
+                <div className={styles.section + " " + styles.stats}>
                     <h2>Statistics</h2>
-                    <div></div>
                     <div className={styles.countdownRowWrapper} style={{ textAlign: 'start' }}>
                         <div>
                             <Countdown
@@ -181,7 +177,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
-                    <div>
+                    <div className={styles.scrollTable}>
                         <table>
                             <tbody>
                                 <SchoolLeaderboard
