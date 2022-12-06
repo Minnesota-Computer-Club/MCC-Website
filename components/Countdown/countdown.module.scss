@@ -4,7 +4,6 @@
 }
 
 div .countdownPrefix {
-  font-weight: bold;
   text-shadow: 0 0 4px rgb(255 255 255 / 75%);
 }
 
@@ -12,11 +11,6 @@ div .countdownPrefix {
   color: rgb(117, 193, 255);
 }
 
-.countdownWrapper {
-  padding: 0.25rem;
-  padding-left: 0;
-}
-
-div .countdownPrefix {
+.other {
   font-weight: bold;
 }

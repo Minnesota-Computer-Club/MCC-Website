@@ -47,7 +47,7 @@ const Countdown = props => {
   useEffect(() => {
     setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
   }, [props.startDate, props.endDate, props.dateOptions]);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(timeBetweenDates(props.startDate || new Date(), props.endDate || startOfTomorrow(), props.dateOptions));
@@ -68,14 +68,20 @@ const Countdown = props => {
             timeLeft[key] !== -1 && (timeLeft[key] !== 0 || key == 'seconds')
               ?
               <>
-                <span className={styles.other}>{timeLeft[key]}</span>
+                <span className={styles.other}>
+                  {
+                    key == 'seconds' || key == 'minutes' || key == 'hours'
+                      ? timeLeft[key].toString().padStart(2, 0)
+                      : timeLeft[key]
+                  }
+                </span>
                 <span className={styles.time}>{suffixesForCountdown[key]}</span>
                 {
                   // custom separator stuff
                   key !== 'seconds'
                     ? <span>{props.dateSeparator || ', '}</span>
                     : <span></span>
-                  }
+                }
               </>
               :
               <></>

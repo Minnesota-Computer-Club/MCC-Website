@@ -173,13 +173,6 @@ export default function Leaderboard({ AOC, form, location }) {
                                 endMessage="The competition has ended."
                             />
                         </div>
-                        <div>
-                            <Countdown
-                                prefix="New Years In"
-                                endDate={new Date("Jan 1 2023")}
-                                endMessage="It's 2023!"
-                            />
-                        </div>
                     </div>
                 </div>
                 <div className={styles.section}>

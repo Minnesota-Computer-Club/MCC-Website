@@ -66,7 +66,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
                 </td>
                 <td>
                     <p className={colorStyles[cssClassName]} >
-                        {Math.round(school.stars * 10) / 10} ★
+                        {Math.round(school.stars * 10) / 10}★&nbsp;
                     </p>
                 </td>
                 <td className={styles.hide}>
