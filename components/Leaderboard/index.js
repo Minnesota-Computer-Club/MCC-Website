@@ -227,34 +227,9 @@ export default function Leaderboard({ AOC, form, location }) {
                         </table>
                     </div>
                 </div>
-                <div className={styles.doublesec}>
-                    <h1>Wall of Reminders {/* shame */}</h1>
-                    <div>
-                        <h2>Not in Leaderboard</h2>
-                        <p>People who filled out the google form but haven&apos;t joined the leaderboard yet.</p>
-                        <div className={styles.scrollTable}>
-                            <table>
-                                <tbody>
-                                    <NoLb
-                                        {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
-                                    />
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div>
-                        <h2>Not in Form</h2>
-                        <p>People who have joined the leaderboard but have not filled out the google form yet.</p>
-                        <div className={styles.scrollTable}>
-                            <table>
-                                <tbody>
-                                    <NoForm
-                                        {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
-                                    />
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <div className={styles.section}>
+                    <h2>Don&apos;t see yourself?</h2>
+                    <p><a href="./leaderboard/orphans">Click Here</a> for more.</p>
                 </div>
             </div>
         </>

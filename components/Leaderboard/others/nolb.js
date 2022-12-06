@@ -1,12 +1,9 @@
-import lbStyles from '../leaderboard.module.scss';
-import styles from '../styles.module.scss';
-
 // checks if user is in the lb
 function userInLb(user, aocMembers) {
     return aocMembers.findIndex(x => x.name == user) != -1;
 }
 
-export function NoLb({ AOC, form, generateStars, isUserValid, regenLocalScores }) {
+export function NoLb({ AOC, form, regenLocalScores }) {
     let li = []; // array of table rows with info
     let aocMembers = Object.values(AOC); //Convert AOC.members obj into array
     aocMembers = regenLocalScores(aocMembers); // map
