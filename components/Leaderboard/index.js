@@ -57,6 +57,63 @@ export default function Leaderboard({ AOC, form, location }) {
     }
 
     /*
+    Regenerate the local score for each user in a combined leaderboard in the same way that the Advent of Code leaderboard does
+    */
+
+    function regenLocalScores(users) {
+        // THE CALCULATION:
+        // For N users
+        // The first user to get each star gets N points
+        // the seconds gets N-1, and so on
+
+        const N = users.length;
+        let current_puzzles = new Set();
+        users.forEach((u) =>
+            Object.keys(u.completion_day_level).forEach((k) => current_puzzles.add(k))
+        );
+
+        let new_localscores = new Map();
+
+        // For every star, make a list of the users that completed it in order
+        let puzzle_completers_ordered = [...current_puzzles]
+            .map((puzzle_id) => [
+                [puzzle_id, 1],
+                [puzzle_id, 2],
+            ])
+            .flat()
+            .map(([puzzle, star]) =>
+                users
+                    .filter(
+                        (u) =>
+                            puzzle in u.completion_day_level &&
+                            star in u.completion_day_level[puzzle]
+                    )
+                    .sort(
+                        (a, b) =>
+                            a.completion_day_level[puzzle][star].get_star_ts -
+                            b.completion_day_level[puzzle][star].get_star_ts
+                    )
+                    .map((u) => u.name)
+            );
+
+        puzzle_completers_ordered.forEach((star_catchers) =>
+            star_catchers.forEach((name, index) => {
+                new_localscores.set(
+                    name,
+                    new_localscores.has(name) ? new_localscores.get(name) + N - index : N - index
+                );
+            })
+        );
+
+        console.log(new_localscores);
+        console.log(users);
+
+        return users.map((u) =>
+            new_localscores.has(u.name) ? { ...u, local_score: new_localscores.get(u.name) } : u
+        );
+    }
+
+    /*
     calculate team's total stars completed
     */
 
@@ -159,6 +216,7 @@ export default function Leaderboard({ AOC, form, location }) {
                                         getSchoolColor,
                                         isUserValid,
                                         calculateTeamStars,
+                                        regenLocalScores,
                                     }}
                                 />
                             </tbody>
@@ -171,7 +229,7 @@ export default function Leaderboard({ AOC, form, location }) {
                         <table>
                             <tbody>
                                 <IndividualLeaderboard
-                                    {...{ AOC, form, generateStars, isUserValid }}
+                                    {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
                                 />
                             </tbody>
                         </table>
