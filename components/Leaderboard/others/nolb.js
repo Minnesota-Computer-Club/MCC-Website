@@ -11,8 +11,6 @@ export function NoLb({ AOC, form, generateStars, isUserValid, regenLocalScores }
     let aocMembers = Object.values(AOC); //Convert AOC.members obj into array
     aocMembers = regenLocalScores(aocMembers); // map
 
-    console.log(aocMembers)
-
     for (let username in form) {
         if (userInLb(username, aocMembers)) continue;
 
