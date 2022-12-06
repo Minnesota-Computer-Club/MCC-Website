@@ -41,23 +41,6 @@
             margin: 8px 0;
         }
 
-        div>table {
-            border-collapse: collapse;
-
-            tr {
-                >td {
-                    padding: 2px;
-                }
-
-                transition: background 0.2s;
-                padding: 2px;
-            }
-
-            tr:hover {
-                background: rgba(0, 0, 0, 0.3);
-            }
-        }
-
         .countdownRowWrapper {
             white-space: normal !important;
 
@@ -73,24 +56,42 @@
         >div {
             text-align: end;
         }
+    }
 
-        .stars {
-            text-align: center;
-            display: flex;
-            align-items: center;
+    
+    .stars {
+        text-align: center;
+        display: flex;
+        align-items: center;
 
-            .goldStars {
-                color: #ffff66;
+        .goldStars {
+            color: #ffff66;
+        }
+
+        .silverStar {
+            color: #9999cc;
+        }
+
+        .incompleteStars {
+            color: transparent;
+            user-select: none;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+
+        tr {
+            >td {
+                padding: 2px;
             }
 
-            .silverStar {
-                color: #9999cc;
-            }
+            transition: background 0.2s;
+            padding: 2px;
+        }
 
-            .incompleteStars {
-                color: transparent;
-                user-select: none;
-            }
+        tr:hover {
+            background: rgba(0, 0, 0, 0.3);
         }
     }
 }
@@ -115,3 +116,4 @@
         position: relative;
     }
 }
+

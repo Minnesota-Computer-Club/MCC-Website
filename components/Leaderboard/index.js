@@ -7,6 +7,8 @@ import { Nav } from '../landingPage/Nav/nav';
 import Countdown from '../Countdown/countdown';
 
 import { addSeconds, fromUnixTime, startOfTomorrow } from 'date-fns';
+import { NoForm } from './others/noform';
+import { NoLb } from './others/nolb';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -223,6 +225,35 @@ export default function Leaderboard({ AOC, form, location }) {
                                 />
                             </tbody>
                         </table>
+                    </div>
+                </div>
+                <div className={styles.doublesec}>
+                    <h1>Wall of Reminders {/* shame */}</h1>
+                    <div>
+                        <h2>Not in Leaderboard</h2>
+                        <p>People who filled out the google form but haven&apos;t joined the leaderboard yet.</p>
+                        <div className={styles.scrollTable}>
+                            <table>
+                                <tbody>
+                                    <NoLb
+                                        {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
+                                    />
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Not in Form</h2>
+                        <p>People who have joined the leaderboard but have not filled out the google form yet.</p>
+                        <div className={styles.scrollTable}>
+                            <table>
+                                <tbody>
+                                    <NoForm
+                                        {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
+                                    />
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

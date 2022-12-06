@@ -5,8 +5,6 @@ export default function RochesterLeaderboard({ AOC, form }) {
     return <Leaderboard {...{ AOC, form, location: 'Rochester' }} />;
 }
 
-
-
 async function fetchLeaderboard(id) {
     let req = await fetch(`https://adventofcode.com/2022/leaderboard/private/view/${id}.json`, {
         headers: {
