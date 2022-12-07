@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Link from 'next/link';
+
 import styles from './leaderboard.module.scss';
 import IndividualLeaderboard from './individuals';
 import TeamLeaderboard from './teams';
@@ -227,7 +229,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Don&apos;t see yourself?</h2>
-                    <p><a href="./leaderboard/others">Click Here</a> for more.</p>
+                    <p><Link href="./leaderboard/others">Click Here</Link> for more.</p>
                 </div>
             </div>
         </>
