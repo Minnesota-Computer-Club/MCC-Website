@@ -7,8 +7,6 @@ import { Nav } from '../landingPage/Nav/nav';
 import Countdown from '../Countdown/countdown';
 
 import { addSeconds, fromUnixTime, startOfTomorrow } from 'date-fns';
-import { NoForm } from './others/noform';
-import { NoLb } from './others/nolb';
 
 const MAX_STARS = 25;
 const STAR = '★';
