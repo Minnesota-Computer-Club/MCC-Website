@@ -229,7 +229,8 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Don&apos;t see yourself?</h2>
-                    <p><Link href="./leaderboard/others">Click Here</Link> for more.</p>
+                    {/* <p className={styles.findOutBig}><Link href="./leaderboard/others">Click Here</Link> for more.</p> */}
+                    <Link href="./leaderboard/others" className={styles.btn}><p className={styles.findOutSmall}>Find out Why</p></Link>
                 </div>
             </div>
         </>

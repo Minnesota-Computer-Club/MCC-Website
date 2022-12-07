@@ -120,6 +120,10 @@
     user-select: none;
 }
 
+// .findOutSmall {
+//     display: none;
+// }
+
 @media screen and (max-width: 600px) {
     .scrollTable {
         overflow: auto;
@@ -130,4 +134,35 @@
     .doublesec {
         padding: 10px;
     }
+
+    // .findOutBig {
+    //     display: none;
+    // }
 }
+
+.btn {
+    $p: #7060A9;
+
+    .findOutSmall {
+        background: $p;
+        color: white;
+
+        border-radius: 0.25rem;
+
+        display: inline-block;
+        font-size: 0.875rem;
+        line-height: 1;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .findOutSmall:hover {
+        background-color: white;
+        color: $p;
+    }
+}
+
+// }
