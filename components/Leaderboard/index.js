@@ -229,7 +229,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Don&apos;t see yourself?</h2>
-                    <p><a href="./leaderboard/orphans">Click Here</a> for more.</p>
+                    <p><a href="./leaderboard/others">Click Here</a> for more.</p>
                 </div>
             </div>
         </>

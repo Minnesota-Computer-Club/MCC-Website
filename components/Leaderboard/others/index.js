@@ -104,7 +104,7 @@ export default function Leaderboard({ AOC, form }) {
                 <div className={styles.doublesec}>
                     <h1>Wall of Reminders {/* shame */}</h1>
                     <p>If you don&apos;t see yourself on the main leaderboard, you may have messed up the form. Please verify you completed the <Link href="https://forms.gle/4g9MYAjyY4KmnvEo9">form</Link>.</p>
-                    <p><Link href="..">Return</Link></p>
+                    <p><Link href=".">Return</Link></p>
                     <div>
                         <h2>Not in Leaderboard</h2>
                         <p>People who filled out the google form but haven&apos;t joined the leaderboard yet.</p>
