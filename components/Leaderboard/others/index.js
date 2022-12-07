@@ -105,8 +105,8 @@ export default function Leaderboard({ AOC, form }) {
                     <h1>Wall of Reminders {/* shame */}</h1>
                     <p>
                         If you don&apos;t see yourself on the main leaderboard, you may have messed up the form.
-                        Please verify you completed the <Link href="https://forms.gle/4g9MYAjyY4KmnvEo9">Rochester form</Link>,
-                        or the <Link href="https://forms.gle/1hFTUsLNribKy9fm6">Minnesota form</Link>. (Please don&apos;t do both)
+                        Please verify you completed the <Link href="https://forms.gle/4g9MYAjyY4KmnvEo9" target="_blank">Rochester form</Link>,
+                        or the <Link href="https://forms.gle/1hFTUsLNribKy9fm6" target="_blank">Minnesota form</Link>. (Please don&apos;t do both)
                     </p>
                     <p>&lt;&lt; <Link href=".">Return to main leaderboard</Link></p>
                     <div>
