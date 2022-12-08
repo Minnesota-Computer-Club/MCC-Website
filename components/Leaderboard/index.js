@@ -27,6 +27,8 @@ const SCHOOLTOCOLOR = {
 export default function Leaderboard({ AOC, form, location }) {
     const totalUsers = Object.keys(AOC).length;
     const totalStars = Object.keys(AOC).reduce((prev, key) => prev + AOC[key].stars, 0);
+    const avgStars = Math.round((totalStars / totalUsers) * 100) / 100;
+    const avgStarsInt = Math.round(avgStars);
 
     function getSchoolColor(schoolName) {
         return SCHOOLTOCOLOR[schoolName];
@@ -182,7 +184,7 @@ export default function Leaderboard({ AOC, form, location }) {
 
                         <div>
                             <span className={styles.boldShadow}>Average Stars:&nbsp;</span>
-                            <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{Math.round((totalStars / totalUsers) * 100) / 100}{STAR}</span>
+                            <span className={avgStarsInt % 2 == 0 ? styles.goldStars : styles.silverStar}>{avgStars}{STAR}</span>
                         </div>
 
                         <div>
