@@ -161,36 +161,33 @@ export default function Leaderboard({ AOC, form, location }) {
                 <div className={styles.section + " " + styles.stats}>
                     <h2>Statistics</h2>
                     <div className={styles.countdownRowWrapper}>
-                        <div>
-                            <Countdown
-                                prefix="Next Puzzle Unlocks In"
-                                endDate={addSeconds(startOfTomorrow(), 1)}
-                                repeatUntil={fromUnixTime(1671926400)}
-                                endMessage="Advent of Code 2022 has ended."
-                            />
-                        </div>
-                        <div>
-                            <Countdown
-                                prefix="Competition Ends In"
-                                endDate={fromUnixTime(1672552801)}
-                                endMessage="The competition has ended."
-                            />
-                        </div>
+                        <Countdown
+                            prefix="Next Puzzle Unlocks In"
+                            endDate={addSeconds(startOfTomorrow(), 1)}
+                            repeatUntil={fromUnixTime(1671926400)}
+                            endMessage="Advent of Code 2022 has ended."
+                        />
+
+                        <Countdown
+                            prefix="Competition Ends In"
+                            endDate={fromUnixTime(1672552801)}
+                            endMessage="The competition has ended."
+                        />
                     </div>
                     <div className={styles.countdownRowWrapper}>
                         <div>
-                            Total stars:&nbsp;
+                            <span className={styles.boldShadow}>Total stars:&nbsp;</span>
                             <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{totalStars}{STAR}</span>
                         </div>
 
                         <div>
-                            Average Stars:&nbsp;
+                            <span className={styles.boldShadow}>Average Stars:&nbsp;</span>
                             <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{Math.round((totalStars / totalUsers) * 100) / 100}{STAR}</span>
                         </div>
 
                         <div>
-                            Total Users:&nbsp;
-                            <span>{totalUsers}</span>
+                            <span className={styles.boldShadow}>Total Users:&nbsp;</span>
+                            <span style={{ color: "rgb(117, 193, 255)" }}>{totalUsers}</span>
                         </div>
                     </div>
                 </div>
