@@ -1,8 +1,8 @@
-import Leaderboard from '../../../../components/Leaderboard';
+import Orphans from '../../../../components/Leaderboard/others';
 import { readFile } from 'fs/promises';
 
 export default function RochesterLeaderboard({ AOC, form }) {
-    return <Leaderboard {...{ AOC, form, location: 'Rochester' }} />;
+    return <Orphans {...{ AOC, form }} />;
 }
 
 async function fetchLeaderboard(id) {

@@ -41,23 +41,6 @@
             margin: 8px 0;
         }
 
-        div>table {
-            border-collapse: collapse;
-
-            tr {
-                >td {
-                    padding: 2px;
-                }
-
-                transition: background 0.2s;
-                padding: 2px;
-            }
-
-            tr:hover {
-                background: rgba(0, 0, 0, 0.3);
-            }
-        }
-
         .countdownRowWrapper {
             text-align: start;
 
@@ -73,25 +56,54 @@
         >div {
             text-align: end;
         }
+    }
 
-        .stars {
-            text-align: center;
-            display: flex;
-            align-items: center;
 
-            .goldStars {
-                color: #ffff66;
-            }
+    .stars {
+        text-align: center;
+        display: flex;
+        align-items: center;
 
-            .silverStar {
-                color: #9999cc;
-            }
-
-            .incompleteStars {
-                color: transparent;
-                user-select: none;
-            }
+        .goldStars {
+            color: #ffff66;
         }
+
+        .silverStar {
+            color: #9999cc;
+        }
+
+        .incompleteStars {
+            color: transparent;
+            user-select: none;
+        }
+    }
+}
+
+.scrollTable {
+    table {
+        border-collapse: collapse;
+
+        tr {
+            >td {
+                padding: 2px;
+            }
+
+            transition: background 0.2s;
+            padding: 2px;
+        }
+
+        tr:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    li {
+        transition: background 0.2s;
+        padding: 2px;
+    }
+
+    li:hover {
+        background: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -108,10 +120,49 @@
     user-select: none;
 }
 
+// .findOutSmall {
+//     display: none;
+// }
+
 @media screen and (max-width: 600px) {
     .scrollTable {
         overflow: auto;
         width: 95vw;
         position: relative;
     }
+
+    .doublesec {
+        padding: 10px;
+    }
+
+    // .findOutBig {
+    //     display: none;
+    // }
 }
+
+.btn {
+    $p: #7060A9;
+
+    .findOutSmall {
+        background: $p;
+        color: white;
+
+        border-radius: 0.25rem;
+
+        display: inline-block;
+        font-size: 0.875rem;
+        line-height: 1;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .findOutSmall:hover {
+        background-color: white;
+        color: $p;
+    }
+}
+
+// }
