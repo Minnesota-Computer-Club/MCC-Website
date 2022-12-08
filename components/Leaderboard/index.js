@@ -23,6 +23,8 @@ const SCHOOLTOCOLOR = {
 };
 
 export default function Leaderboard({ AOC, form, location }) {
+    const totalStars = Object.keys(AOC).reduce((prev, key) => prev + AOC[key].stars, 0);
+
     function getSchoolColor(schoolName) {
         return SCHOOLTOCOLOR[schoolName];
     }
@@ -30,11 +32,11 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     Generates the star elements! lol
     */
-
     function generateStars(starCount) {
         let goldStars = Math.floor(starCount / 2);
         let silverStar = starCount % 2;
         let incompleteStars = MAX_STARS - goldStars - silverStar;
+
         return (
             <div className={styles.stars} key={Math.random()}>
                 <p className={styles.goldStars}>{STAR.repeat(goldStars)}</p>
@@ -47,7 +49,6 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     Should this user be render & counted in stats?
     */
-
     function isUserValid(aocUser) {
         let formUser = form[aocUser.name];
         if (!formUser) return false; //user is not in the form
@@ -113,7 +114,6 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     calculate team's total stars completed
     */
-
     function calculateTeamStars(teamMembers) {
         let counted = {};
         let stars = 0;
@@ -127,6 +127,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 }
             }
         }
+
         return stars;
     }
 
@@ -134,7 +135,6 @@ export default function Leaderboard({ AOC, form, location }) {
         Add yourself if you contribute!
     
     */
-
     function titleEasterEgg(event) {
         let title = event.target.innerText;
         let newTitle = 'Made by github.com/KennyHarrer 👺 with help from github.com/jobartucz 🤔';
@@ -174,7 +174,12 @@ export default function Leaderboard({ AOC, form, location }) {
                             />
                         </div>
                     </div>
-                    {/* <div className={}></div> */}
+                    <div>
+                        <div>
+                            Total stars:
+                            <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{totalStars}{STAR}</span>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
