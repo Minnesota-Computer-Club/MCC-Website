@@ -59,6 +59,8 @@
         }
 
         .countdownRowWrapper {
+            text-align: start;
+
             div {
                 @media screen and (max-width: 600px) {
                     .countdownWrapper {

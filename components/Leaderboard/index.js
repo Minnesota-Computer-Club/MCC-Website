@@ -23,6 +23,7 @@ const SCHOOLTOCOLOR = {
 };
 
 export default function Leaderboard({ AOC, form, location }) {
+    const totalUsers = Object.keys(AOC).length;
     const totalStars = Object.keys(AOC).reduce((prev, key) => prev + AOC[key].stars, 0);
 
     function getSchoolColor(schoolName) {
@@ -157,7 +158,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
                 <div className={styles.section + " " + styles.stats}>
                     <h2>Statistics</h2>
-                    <div className={styles.countdownRowWrapper} style={{ textAlign: 'start' }}>
+                    <div className={styles.countdownRowWrapper}>
                         <div>
                             <Countdown
                                 prefix="Next Puzzle Unlocks In"
@@ -174,10 +175,15 @@ export default function Leaderboard({ AOC, form, location }) {
                             />
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.countdownRowWrapper}>
                         <div>
-                            Total stars:
+                            Total stars:&nbsp;
                             <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{totalStars}{STAR}</span>
+                        </div>
+
+                        <div>
+                            Average Stars:&nbsp;
+                            <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{Math.round((totalStars / totalUsers) * 100) / 100}{STAR}</span>
                         </div>
                     </div>
                 </div>
