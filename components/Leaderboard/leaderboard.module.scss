@@ -120,10 +120,6 @@
     user-select: none;
 }
 
-// .findOutSmall {
-//     display: none;
-// }
-
 @media screen and (max-width: 600px) {
     .scrollTable {
         overflow: auto;
@@ -134,10 +130,6 @@
     .doublesec {
         padding: 10px;
     }
-
-    // .findOutBig {
-    //     display: none;
-    // }
 }
 
 .btn {
@@ -164,5 +156,3 @@
         color: $p;
     }
 }
-
-// }
