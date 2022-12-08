@@ -36,7 +36,7 @@ export default function Leaderboard({ AOC, form, location }) {
         let silverStar = starCount % 2;
         let incompleteStars = MAX_STARS - goldStars - silverStar;
         return (
-            <div className={styles.stars}>
+            <div className={styles.stars} key={Math.random()}>
                 <p className={styles.goldStars}>{STAR.repeat(goldStars)}</p>
                 <p className={styles.silverStar}>{STAR.repeat(silverStar)}</p>
                 <p className={styles.incompleteStars}>{STAR.repeat(incompleteStars) + ' '}</p>
@@ -174,6 +174,7 @@ export default function Leaderboard({ AOC, form, location }) {
                             />
                         </div>
                     </div>
+                    {/* <div className={}></div> */}
                 </div>
                 <div className={styles.section}>
                     <h2>Schools</h2>
