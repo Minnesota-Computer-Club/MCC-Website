@@ -1,8 +1,10 @@
-import Leaderboard from '../../../../components/Leaderboard';
+import Others from '../../../components/Leaderboard/others';
 import { readFile } from 'fs/promises';
 
 export default function RochesterLeaderboard({ AOC, form }) {
-    return <Leaderboard {...{ AOC, form, location: 'Rochester' }} />;
+    return <>
+        <Others {...{ AOC, form }} />
+    </>;
 }
 
 async function fetchLeaderboard(id) {
@@ -14,7 +16,7 @@ async function fetchLeaderboard(id) {
     return await req.json();
 }
 
-let leaderboards = [641987];
+let leaderboards = [2216296, 641987];
 let cached = { AOC: {}, form: {} };
 let last;
 
@@ -34,13 +36,16 @@ export async function getServerSideProps() {
     }
 
     try {
-        // try to grab production file
-        let formData = await readFile('./python/users_roch.json', { encoding: 'utf-8' });
+        //try to grab production file
+        let formData = await readFile('./python/users_mn.json', { encoding: 'utf-8' });
         formData = JSON.parse(formData);
-        cached.form = formData;
+        //grab OTHER production file
+        let rochFormData = await readFile('./python/users_roch.json');
+        rochFormData = JSON.parse(rochFormData);
+        cached.form = { ...rochFormData, ...formData };
     } catch (e) {
         // fall back to dev file
-        console.log('falling back on dev file... rochester leaderboard');
+        console.log('falling back on dev file... mn leaderboard');
         try {
             let formData = await readFile('./devUsers.json', { encoding: 'utf-8' });
             formData = JSON.parse(formData);
