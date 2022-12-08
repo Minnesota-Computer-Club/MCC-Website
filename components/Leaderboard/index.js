@@ -185,6 +185,11 @@ export default function Leaderboard({ AOC, form, location }) {
                             Average Stars:&nbsp;
                             <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{Math.round((totalStars / totalUsers) * 100) / 100}{STAR}</span>
                         </div>
+
+                        <div>
+                            Total Users:&nbsp;
+                            <span>{totalUsers}</span>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.section}>
