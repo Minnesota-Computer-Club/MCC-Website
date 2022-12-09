@@ -13,7 +13,7 @@ with open(userfile, newline='') as csvfile:
         del row['Email Address']
         del row['What is your t-shirt size?']
 
-        key = row['What is your Advent of Code Username? (Make sure you are logged in to see it!)']
+        key = row['What is your Advent of Code Username? (Make sure you are logged in to see it!)'].strip()
         jsondata[key] = row
 
     csvfile.close()
