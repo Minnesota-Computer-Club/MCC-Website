@@ -57,8 +57,8 @@ const Countdown = props => {
   });
 
   return (
-    <div className={styles.countdownWrapper}>
-      <span className={styles.countdownPrefix}>{props.prefix || "Countdown"}</span>
+    <div className={styles.countdownWrapper}  key={Math.random()}>
+      <span className={styles.countdownPrefix}  key={Math.random()}>{props.prefix || "Countdown"}</span>
       <span>{props.divider || ': '}</span>
 
       {

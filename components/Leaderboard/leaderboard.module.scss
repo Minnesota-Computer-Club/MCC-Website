@@ -42,7 +42,7 @@
         }
 
         .countdownRowWrapper {
-            white-space: normal !important;
+            text-align: start;
 
             div {
                 @media screen and (max-width: 600px) {
@@ -120,10 +120,6 @@
     user-select: none;
 }
 
-// .findOutSmall {
-//     display: none;
-// }
-
 @media screen and (max-width: 600px) {
     .scrollTable {
         overflow: auto;
@@ -134,10 +130,6 @@
     .doublesec {
         padding: 10px;
     }
-
-    // .findOutBig {
-    //     display: none;
-    // }
 }
 
 .btn {
@@ -165,4 +157,6 @@
     }
 }
 
-// }
+.boldShadow {
+    text-shadow: 0 0 4px rgb(255 255 255 / 75%);
+}
