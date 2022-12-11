@@ -37,13 +37,13 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     Generates the star elements! lol
     */
-    function generateStars(starCount) {
+    function generateStars(starCount, k) {
         let goldStars = Math.floor(starCount / 2);
         let silverStar = starCount % 2;
         let incompleteStars = MAX_STARS - goldStars - silverStar;
 
         return (
-            <div className={styles.stars} key={Math.random()}>
+            <div className={styles.stars} key={k}>
                 <p className={styles.goldStars}>{STAR.repeat(goldStars)}</p>
                 <p className={styles.silverStar}>{STAR.repeat(silverStar)}</p>
                 <p className={styles.incompleteStars}>{STAR.repeat(incompleteStars) + ' '}</p>
