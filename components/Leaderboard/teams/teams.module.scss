@@ -1,8 +1,17 @@
-.team:not(:hover) .members {
-    display: none;
+.team:hover .members {
+    display: block;
 }
 
 .members {
     text-align: left;
+    display: none;
+}
+
+.team:hover .membersMobile {
     display: block;
+}
+
+.membersMobile {
+    text-align: left;
+    display: none;
 }

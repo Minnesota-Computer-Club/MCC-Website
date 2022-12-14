@@ -90,7 +90,7 @@ export default function TeamLeaderboard({
         }, 0);
         let stars = calculateTeamStars(members);
         tableRows.push(
-            <tr key={rank} className={styles.rows + " " + teamStyles.team}>
+            <tr key={rank} className={teamStyles.team}>
                 <td>
                     <p>{rank}) </p>
                 </td>
@@ -99,12 +99,17 @@ export default function TeamLeaderboard({
                 </td>
                 <td
                     className={
-                        styles.mobile +
-                        ' ' +
-                        (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
+                        styles.mobile
                     }
                 >
-                    {stars}★{' '}
+                    <p className={
+                        (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
+                    }>
+                        {stars}★{' '}
+                    </p>
+                    <p className={teamStyles.membersMobile}>
+                        {members.map((x, i) => <p key={i}>{x.name}</p>)}
+                    </p>
                 </td>
                 <td className={styles.hide + " " + styles.row}>
                     {generateStars(stars)}
