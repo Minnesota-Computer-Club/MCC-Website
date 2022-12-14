@@ -67,7 +67,7 @@ const Countdown = props => {
             // check if it's an invalid date / 0 minutes hours etc
             timeLeft[key] !== -1 && (timeLeft[key] !== 0 || key == 'seconds')
               ?
-              <>
+              <span className={key} key={key}>
                 <span className={styles.other}>
                   {
                     key == 'seconds' || key == 'minutes' || key == 'hours'
@@ -82,9 +82,9 @@ const Countdown = props => {
                     ? <span>{props.dateSeparator || ', '}</span>
                     : <span></span>
                 }
-              </>
+              </span>
               :
-              <></>
+              <span key={key}></span>
           ))
           :
           <>

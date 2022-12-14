@@ -25,6 +25,11 @@ const SCHOOLTOCOLOR = {
 };
 
 export default function Leaderboard({ AOC, form, location }) {
+    const totalUsers = Object.keys(AOC).length;
+    const totalStars = Object.keys(AOC).reduce((prev, key) => prev + AOC[key].stars, 0);
+    const avgStars = Math.round((totalStars / totalUsers) * 100) / 100;
+    const avgStarsInt = Math.round(avgStars);
+
     function getSchoolColor(schoolName) {
         return SCHOOLTOCOLOR[schoolName];
     }
@@ -32,13 +37,13 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     Generates the star elements! lol
     */
-
-    function generateStars(starCount) {
+    function generateStars(starCount, k) {
         let goldStars = Math.floor(starCount / 2);
         let silverStar = starCount % 2;
         let incompleteStars = MAX_STARS - goldStars - silverStar;
+
         return (
-            <div className={styles.stars}>
+            <div className={styles.stars} key={k}>
                 <p className={styles.goldStars}>{STAR.repeat(goldStars)}</p>
                 <p className={styles.silverStar}>{STAR.repeat(silverStar)}</p>
                 <p className={styles.incompleteStars}>{STAR.repeat(incompleteStars) + ' '}</p>
@@ -49,7 +54,6 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     Should this user be render & counted in stats?
     */
-
     function isUserValid(aocUser) {
         let formUser = form[aocUser.name];
         if (!formUser) return false; //user is not in the form
@@ -115,7 +119,6 @@ export default function Leaderboard({ AOC, form, location }) {
     /*
     calculate team's total stars completed
     */
-
     function calculateTeamStars(teamMembers) {
         let counted = {};
         let stars = 0;
@@ -129,6 +132,7 @@ export default function Leaderboard({ AOC, form, location }) {
                 }
             }
         }
+
         return stars;
     }
 
@@ -136,7 +140,6 @@ export default function Leaderboard({ AOC, form, location }) {
         Add yourself if you contribute!
     
     */
-
     function titleEasterEgg(event) {
         let title = event.target.innerText;
         let newTitle = 'Made by github.com/KennyHarrer 👺 with help from github.com/jobartucz 🤔';
@@ -159,21 +162,34 @@ export default function Leaderboard({ AOC, form, location }) {
                 <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
                 <div className={styles.section + " " + styles.stats}>
                     <h2>Statistics</h2>
-                    <div className={styles.countdownRowWrapper} style={{ textAlign: 'start' }}>
+                    <div className={styles.countdownRowWrapper}>
+                        <Countdown
+                            prefix="Next Puzzle Unlocks In"
+                            endDate={addSeconds(startOfTomorrow(), 1)}
+                            repeatUntil={fromUnixTime(1671926400)}
+                            endMessage="Advent of Code 2022 has ended."
+                        />
+
+                        <Countdown
+                            prefix="Competition Ends In"
+                            endDate={fromUnixTime(1672552801)}
+                            endMessage="The competition has ended."
+                        />
+                    </div>
+                    <div className={styles.countdownRowWrapper}>
                         <div>
-                            <Countdown
-                                prefix="Next Puzzle Unlocks In"
-                                endDate={addSeconds(startOfTomorrow(), 1)}
-                                repeatUntil={fromUnixTime(1671926400)}
-                                endMessage="Advent of Code 2022 has ended."
-                            />
+                            <span className={styles.boldShadow}>Total stars:&nbsp;</span>
+                            <span className={totalStars % 2 == 0 ? styles.goldStars : styles.silverStar}>{totalStars}{STAR}</span>
                         </div>
+
                         <div>
-                            <Countdown
-                                prefix="Competition Ends In"
-                                endDate={fromUnixTime(1672552801)}
-                                endMessage="The competition has ended."
-                            />
+                            <span className={styles.boldShadow}>Average Stars:&nbsp;</span>
+                            <span className={avgStarsInt % 2 == 0 ? styles.goldStars : styles.silverStar}>{avgStars}{STAR}</span>
+                        </div>
+
+                        <div>
+                            <span className={styles.boldShadow}>Total Users:&nbsp;</span>
+                            <span style={{ color: "rgb(117, 193, 255)" }}>{totalUsers}</span>
                         </div>
                     </div>
                 </div>

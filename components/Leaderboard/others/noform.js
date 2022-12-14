@@ -32,7 +32,7 @@ export function NoForm({ AOC, form: _, generateStars, isUserValid, regenLocalSco
                 >
                     {stars}★{' '}
                 </td>
-                <td className={styles.hide}>{generateStars(stars)}</td>
+                <td className={styles.hide}>{generateStars(stars, rank)}</td>
                 <td><p>{name}</p></td>
             </tr>
         );
