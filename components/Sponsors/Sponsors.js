@@ -13,6 +13,7 @@ export function Sponsors() {
             <img alt="winona" className={styles.blacklogo} src="/winona.png" />
             <img alt="ibm" className={styles.blacklogo} src="/ibm.svg" />
             <img alt="mc" className={styles.blacklogo} src="/mc.svg" />
+            <img alt="aqui" className={styles.blacklogo} src="/aqui.png" />
         </div>
     );
 }
