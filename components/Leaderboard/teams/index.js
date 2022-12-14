@@ -57,7 +57,7 @@ export default function TeamLeaderboard({
             ['Which programming language(s) do you plan on using? (This is just informational, you will not be held to your choice)']:
             language,
             ['What is your Advent of Code Username? (Make sure you are logged in to see it!)']:
-            username
+            username,
         } = formUser;
         if (team != 'Team') continue; // if the user is not in a team we aren't going to render them in the teams leaderboard
         let { local_score: score, stars, completion_day_level } = AOCUser; // deconstruct aoc stats

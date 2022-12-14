@@ -52,8 +52,8 @@ def respsheet2json(svc, sheetID):
                 if (coli >= len(row)): 
                     user[colnames[coli]] = ""
                 else:
-                    user[colnames[coli]] = row[coli]
-        users_json[user["What is your Advent of Code Username? (Make sure you are logged in to see it!)"]] = user
+                    user[colnames[coli]] = row[coli].strip()
+        users_json[user["What is your Advent of Code Username? (Make sure you are logged in to see it!)"].strip()] = user
         
     # Do a little data-massaging to clean up the high school names
     for k in users_json.keys():
