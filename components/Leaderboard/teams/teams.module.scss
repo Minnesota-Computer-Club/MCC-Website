@@ -1,14 +1,8 @@
 .team:not(:hover) .members {
-    font-size: 0;
-    opacity: 0;
+    display: none;
 }
 
 .members {
-    position: relative;
     text-align: left;
-    
-    overflow: hidden;
-    font-size: 16px;
-    opacity: 1;
-    transition: font-size 0.5s opacity 0.5s 1s;
+    display: block;
 }
