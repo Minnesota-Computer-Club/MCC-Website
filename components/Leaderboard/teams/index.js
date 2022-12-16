@@ -4,6 +4,7 @@
 
 */
 import lbStyles from '../leaderboard.module.scss';
+import teamStyles from './teams.module.scss';
 import styles from '../styles.module.scss';
 
 function hexToRGB(hex) {
@@ -34,14 +35,14 @@ export default function TeamLeaderboard({
     calculateTeamStars,
     regenLocalScores
 }) {
-    let tableRows = []; //array of table row elements
+    let tableRows = []; // array of table row elements
     let teams = {}; // obj teamName: array members
-    let aocMembers = Object.values(AOC); //convert AOC.members to a obj
+    let aocMembers = Object.values(AOC); // convert AOC.members to a obj
     aocMembers = regenLocalScores(aocMembers);
     aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); //sort by stars & score
     for (let AOCUser of aocMembers) {
         if (!isUserValid(AOCUser)) continue;
-        let formUser = form[AOCUser.name]; //grab aoc user's form submission
+        let formUser = form[AOCUser.name]; // grab aoc user's form submission
         /*
             Deconstruct Form Data
         */
@@ -58,11 +59,11 @@ export default function TeamLeaderboard({
             ['What is your Advent of Code Username? (Make sure you are logged in to see it!)']:
             username,
         } = formUser;
-        if (team != 'Team') continue; //if the user is not in a team we aren't going to render them in the teams leaderboard
-        let { local_score: score, stars, completion_day_level } = AOCUser; //deconstruct aoc stats
-        if (!teams[teamName]) teams[teamName] = []; //if this user's team does not exist in the obj yet intialize with array
+        if (team != 'Team') continue; // if the user is not in a team we aren't going to render them in the teams leaderboard
+        let { local_score: score, stars, completion_day_level } = AOCUser; // deconstruct aoc stats
+        if (!teams[teamName]) teams[teamName] = []; // if this user's team does not exist in the obj yet intialize with array
         teams[teamName].push({
-            //push this user into their team
+            // push this user into their team
             name,
             school,
             discord,
@@ -84,12 +85,12 @@ export default function TeamLeaderboard({
         schools = schools.join('/'); //join schools with / (ex. s/s/s)
         let color = mixRGB(colors); //mix the school colors
         let rank = tableRows.length + 1; //the team's ranking
-        let score = members.reduce(function (totalScore, member) {
+        let score = members.reduce((totalScore, member) => {
             return totalScore + member.score;
         }, 0);
         let stars = calculateTeamStars(members);
         tableRows.push(
-            <tr key={rank} className={styles.rows}>
+            <tr key={rank} className={teamStyles.team}>
                 <td>
                     <p>{rank}) </p>
                 </td>
@@ -98,14 +99,24 @@ export default function TeamLeaderboard({
                 </td>
                 <td
                     className={
-                        styles.mobile +
-                        ' ' +
-                        (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
+                        styles.mobile
                     }
                 >
-                    {stars}★{' '}
+                    <p className={
+                        (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
+                    }>
+                        {stars}★{' '}
+                    </p>
+                    <div className={teamStyles.membersMobile}>
+                        {members.map((x, i) => <div key={i}>{x.name}</div>)}
+                    </div>
                 </td>
-                <td className={styles.hide}>{generateStars(stars, rank)}</td>
+                <td className={styles.hide + " " + styles.row}>
+                    {generateStars(stars)}
+                    <div className={teamStyles.members}>
+                        {members.map((x, i) => <div key={i}>{x.name}</div>)}
+                    </div>
+                </td>
                 <td>
                     <p
                         style={{
