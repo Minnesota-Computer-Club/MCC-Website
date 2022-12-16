@@ -107,15 +107,15 @@ export default function TeamLeaderboard({
                     }>
                         {stars}★{' '}
                     </p>
-                    <p className={teamStyles.membersMobile}>
-                        {members.map((x, i) => <p key={i}>{x.name}</p>)}
-                    </p>
+                    <div className={teamStyles.membersMobile}>
+                        {members.map((x, i) => <div key={i}>{x.name}</div>)}
+                    </div>
                 </td>
                 <td className={styles.hide + " " + styles.row}>
                     {generateStars(stars)}
-                    <p className={teamStyles.members}>
+                    <div className={teamStyles.members}>
                         {members.map((x, i) => <div key={i}>{x.name}</div>)}
-                    </p>
+                    </div>
                 </td>
                 <td>
                     <p
