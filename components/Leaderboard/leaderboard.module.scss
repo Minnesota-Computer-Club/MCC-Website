@@ -28,7 +28,9 @@
     }
 
     .section {
-        margin-top: 1.5vh;
+        position: relative;
+        overflow: auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
