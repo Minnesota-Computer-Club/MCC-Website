@@ -8,7 +8,7 @@ import SchoolLeaderboard from './schools';
 import { Nav } from '../landingPage/Nav/nav';
 import Countdown from '../Countdown/countdown';
 
-import { addSeconds, fromUnixTime, startOfTomorrow } from 'date-fns';
+import moment from "moment";
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -23,6 +23,11 @@ const SCHOOLTOCOLOR = {
     individual: '808080',
     ['prior lake']: '1d3c66',
 };
+
+function getPuzzleDate() {
+    console.log(moment.utc());
+    return new Date();
+}
 
 export default function Leaderboard({ AOC, form, location }) {
     const totalUsers = Object.keys(AOC).length;
@@ -165,14 +170,14 @@ export default function Leaderboard({ AOC, form, location }) {
                     <div className={styles.countdownRowWrapper}>
                         <Countdown
                             prefix="Next Puzzle Unlocks In"
-                            endDate={addSeconds(startOfTomorrow(), 1)}
-                            repeatUntil={fromUnixTime(1671926400)}
+                            endDate={getPuzzleDate()}
+                            repeatUntil={new Date(1671926400)}
                             endMessage="Advent of Code 2022 has ended."
                         />
 
                         <Countdown
                             prefix="Competition Ends In"
-                            endDate={fromUnixTime(1672552801)}
+                            endDate={new Date(1672552801)}
                             endMessage="The competition has ended."
                         />
                     </div>
@@ -245,7 +250,6 @@ export default function Leaderboard({ AOC, form, location }) {
                 </div>
                 <div className={styles.section}>
                     <h2>Don&apos;t see yourself?</h2>
-                    {/* <p className={styles.findOutBig}><Link href="./leaderboard/others">Click Here</Link> for more.</p> */}
                     <Link href="./leaderboard/others" className={styles.btn}><p className={styles.findOutSmall}>Find out Why</p></Link>
                 </div>
             </div>

@@ -1,12 +1,10 @@
-/*
-
-    Color mixing functions
-
-*/
 import lbStyles from '../leaderboard.module.scss';
 import teamStyles from './teams.module.scss';
 import styles from '../styles.module.scss';
 
+/*
+    Color mixing functions
+*/
 function hexToRGB(hex) {
     let aRgbHex = hex.match(/.{1,2}/g);
     let aRgb = [parseInt(aRgbHex[0], 16), parseInt(aRgbHex[1], 16), parseInt(aRgbHex[2], 16)];
@@ -14,7 +12,7 @@ function hexToRGB(hex) {
 }
 
 function mixRGB(rgbs) {
-    //sum of all ratios must add up to 1
+    // sum of all ratios must add up to 1
     let r = 0;
     let g = 0;
     let b = 0;
@@ -74,6 +72,7 @@ export default function TeamLeaderboard({
             completion_day_level,
         });
     }
+
     for (let [teamName, members] of Object.entries(teams)) {
         let schools = []; //array of first letter of schools that the team members are in
         let colors = []; //array of school colors
@@ -82,12 +81,14 @@ export default function TeamLeaderboard({
             schools.push(school.charAt(0)); //push first letter of school name
             colors.push([...hexToRGB(getSchoolColor(school.toLowerCase())), ratio]); //push the color of the school
         }
+
         schools = schools.join('/'); //join schools with / (ex. s/s/s)
         let color = mixRGB(colors); //mix the school colors
         let rank = tableRows.length + 1; //the team's ranking
         let score = members.reduce((totalScore, member) => {
             return totalScore + member.score;
         }, 0);
+
         let stars = calculateTeamStars(members);
         tableRows.push(
             <tr key={rank} className={teamStyles.team}>
@@ -140,5 +141,6 @@ export default function TeamLeaderboard({
             </tr>
         );
     }
+
     return tableRows;
 }
