@@ -114,7 +114,7 @@ export default function TeamLeaderboard({
                 <td className={styles.hide + " " + styles.row}>
                     {generateStars(stars)}
                     <p className={teamStyles.members}>
-                        {members.map((x, i) => <p key={i}>{x.name}</p>)}
+                        {members.map((x, i) => <div key={i}>{x.name}</div>)}
                     </p>
                 </td>
                 <td>
