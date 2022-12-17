@@ -179,7 +179,7 @@ export default function Leaderboard({ AOC, form, location }) {
                         <Countdown
                             prefix="Next Puzzle Unlocks In"
                             endDate={getPuzzleDate()}
-                            repeatUntil={fromUnixTime(1671926400)}
+                            repeatUntil={fromUnixTime(1671948001)}
                             endMessage="Advent of Code 2022 has ended."
                         />
 
