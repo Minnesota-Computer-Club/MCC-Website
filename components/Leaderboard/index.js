@@ -171,17 +171,17 @@ export default function Leaderboard({AOC, form, location}) {
 
       <Nav />
 
-      <div className={styles.leaderboard}>
-        <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
-        <div className={styles.section + ' ' + styles.stats}>
-          <h2>Statistics</h2>
-          <div className={styles.countdownRowWrapper}>
-            <Countdown
-              prefix="Next Puzzle Unlocks In"
-              endDate={getPuzzleDate()}
-              repeatUntil={fromUnixTime(1671926400)}
-              endMessage="Advent of Code 2022 has ended."
-            />
+            <div className={styles.leaderboard}>
+                <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
+                <div className={styles.section + " " + styles.stats}>
+                    <h2>Statistics</h2>
+                    <div className={styles.countdownRowWrapper}>
+                        <Countdown
+                            prefix="Next Puzzle Unlocks In"
+                            endDate={getPuzzleDate()}
+                            repeatUntil={fromUnixTime(1671948001)}
+                            endMessage="Advent of Code 2022 has ended."
+                        />
 
             <Countdown
               prefix="Competition Ends In"
