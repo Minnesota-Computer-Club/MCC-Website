@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {Nav} from '../../components/landingPage/Nav/nav';
+import { Nav } from '../../components/landingPage/Nav/nav';
 import styles from './fourOhFour.module.scss';
 
 /**

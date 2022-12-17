@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import './global.scss';
 
-function MyApp({Component, pageProps}) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>

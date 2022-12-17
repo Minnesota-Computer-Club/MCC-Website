@@ -2,7 +2,7 @@ import lbStyles from '../leaderboard.module.scss';
 import styles from '../styles.module.scss';
 
 // people in the LEADERBOARD but not in the FORM
-export function NoForm({AOC, form: _, generateStars, isUserValid, regenLocalScores}) {
+export function NoForm({ AOC, form: _, generateStars, isUserValid, regenLocalScores }) {
   const tableRows = []; // array of table rows with info
   let aocMembers = Object.values(AOC); // Convert AOC.members obj into array
   aocMembers = regenLocalScores(aocMembers);
@@ -11,7 +11,7 @@ export function NoForm({AOC, form: _, generateStars, isUserValid, regenLocalScor
   for (const AOCUser of aocMembers) {
     if (isUserValid(AOCUser)) continue;
 
-    const {local_score: score, stars, name} = AOCUser; // deconstruct aoc data
+    const { local_score: score, stars, name } = AOCUser; // deconstruct aoc data
 
     const rank = tableRows.length + 1; // user's leaderboard ranking
     tableRows.push(
@@ -28,7 +28,7 @@ export function NoForm({AOC, form: _, generateStars, isUserValid, regenLocalScor
                         ' ' +
                         (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
             }
-            style={{textAlign: 'start'}}
+            style={{ textAlign: 'start' }}
           >
             {stars}★{' '}
           </td>

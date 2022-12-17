@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import styles from '../leaderboard.module.scss';
-import {Nav} from '../../landingPage/Nav/nav';
-import {NoForm} from './noform';
-import {NoLb} from './nolb';
+import { Nav } from '../../landingPage/Nav/nav';
+import { NoForm } from './noform';
+import { NoLb } from './nolb';
 import Link from 'next/link';
 
 const MAX_STARS = 25;
 const STAR = '★';
 
-export default function Leaderboard({AOC, form}) {
+export default function Leaderboard({ AOC, form }) {
   /*
     Generates the star elements! lol
     */
@@ -33,7 +33,7 @@ export default function Leaderboard({AOC, form}) {
   function isUserValid(aocUser) {
     const formUser = form[aocUser.name];
     if (!formUser) return false; // user is not in the form
-    const {stars} = aocUser;
+    const { stars } = aocUser;
     if (stars == 0) return false; // if the user is not apart of a team and they dont have stars dont count them
     return true;
   }
@@ -88,7 +88,7 @@ export default function Leaderboard({AOC, form}) {
     );
 
     return users.map((u) =>
-            new_localscores.has(u.name) ? {...u, local_score: new_localscores.get(u.name)} : u
+            new_localscores.has(u.name) ? { ...u, local_score: new_localscores.get(u.name) } : u
     );
   }
 
@@ -115,7 +115,7 @@ export default function Leaderboard({AOC, form}) {
             <div className={styles.scrollTable}>
               <ul>
                 <NoLb
-                  {...{AOC, form, generateStars, isUserValid, regenLocalScores}}
+                  {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
                 />
               </ul>
             </div>
@@ -127,7 +127,7 @@ export default function Leaderboard({AOC, form}) {
               <table>
                 <tbody>
                   <NoForm
-                    {...{AOC, form, generateStars, isUserValid, regenLocalScores}}
+                    {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
                   />
                 </tbody>
               </table>
