@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from "react";
+import React from 'react';
 import Image from 'next/image';
 
 import styles from './nav.module.scss';
@@ -15,7 +15,7 @@ export const Nav = () => {
           <div>
             <Link className={styles.navItem} href="/rochester/wcc/">Rochester Winter Coding Competition</Link>
           </div>
-          
+
           <div>
             <Link className={styles.navItem} href="/wcc">Winter Coding Competition</Link>
           </div>
@@ -27,4 +27,4 @@ export const Nav = () => {
       </nav>
     </header>
   );
-}
+};
