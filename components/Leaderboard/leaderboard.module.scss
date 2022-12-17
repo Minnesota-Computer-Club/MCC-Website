@@ -27,10 +27,16 @@
         }
     }
 
+    
+    @media screen and (max-width: 600px) {
+        .stats {
+            width: 100%;
+        }
+    }
+
     .section {
-        position: relative;
+        margin-top: 1.5vh;
         overflow: auto;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
