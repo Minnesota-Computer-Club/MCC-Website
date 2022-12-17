@@ -8,7 +8,9 @@ import SchoolLeaderboard from './schools';
 import { Nav } from '../landingPage/Nav/nav';
 import Countdown from '../Countdown/countdown';
 
-import moment from "moment";
+// import moment from "moment";
+import moment from "moment-timezone";
+import { fromUnixTime } from 'date-fns';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -25,8 +27,14 @@ const SCHOOLTOCOLOR = {
 };
 
 function getPuzzleDate() {
-    console.log(moment.utc());
-    return new Date();
+    const date =
+        moment()
+            .tz('America/New_York') // convert today to EST
+            .startOf('day') // go to today's EST midnight which is 12 AM
+            .add(1, "day") // go to tomorrow's midnight in EST
+            .add(1, "second") // add 1 second because it unlocks after 12 AM not on 12 AM
+            .toDate(); // convert to date
+    return date;
 }
 
 export default function Leaderboard({ AOC, form, location }) {
@@ -171,13 +179,13 @@ export default function Leaderboard({ AOC, form, location }) {
                         <Countdown
                             prefix="Next Puzzle Unlocks In"
                             endDate={getPuzzleDate()}
-                            repeatUntil={new Date(1671926400)}
+                            repeatUntil={fromUnixTime(1671926400)}
                             endMessage="Advent of Code 2022 has ended."
                         />
 
                         <Countdown
                             prefix="Competition Ends In"
-                            endDate={new Date(1672552801)}
+                            endDate={fromUnixTime(1672552801)}
                             endMessage="The competition has ended."
                         />
                     </div>
