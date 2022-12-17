@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { intervalToDuration, isWithinInterval, startOfTomorrow } from 'date-fns';
+import React, {useEffect, useState} from 'react';
+import {intervalToDuration, isWithinInterval, startOfTomorrow} from 'date-fns';
 
 import styles from './countdown.module.scss';
 
@@ -9,8 +9,8 @@ const defaultRemainingTime = {
   days: -1,
   hours: -1,
   minutes: -1,
-  seconds: -1
-}
+  seconds: -1,
+};
 
 const suffixesForCountdown = {
   years: 'Y',
@@ -18,30 +18,36 @@ const suffixesForCountdown = {
   days: 'D',
   hours: 'H',
   minutes: 'm',
-  seconds: 's'
-}
+  seconds: 's',
+};
 
 const timeBetweenDates = (startDate, endDate, options) => {
-  if (!startDate) { startDate = new Date(); }
-  if (!endDate) { endDate = new Date(); }
-  if (!options) { options = {} }
+  if (!startDate) {
+    startDate = new Date();
+  }
+  if (!endDate) {
+    endDate = new Date();
+  }
+  if (!options) {
+    options = {};
+  }
 
   try {
-    return (intervalToDuration({ start: startDate, end: endDate }));
+    return (intervalToDuration({start: startDate, end: endDate}));
   } catch {
     return defaultRemainingTime;
   }
-}
+};
 
 const countdownIsValid = (startDate, endDate) => {
   try {
-    return isWithinInterval(new Date(), { start: startDate || new Date(), end: endDate || new Date() });
+    return isWithinInterval(new Date(), {start: startDate || new Date(), end: endDate || new Date()});
   } catch {
     return false;
   }
-}
+};
 
-const Countdown = props => {
+const Countdown = (props) => {
   const [timeLeft, setTimeLeft] = useState(defaultRemainingTime);
 
   useEffect(() => {
@@ -58,35 +64,32 @@ const Countdown = props => {
 
   return (
     <div className={styles.countdownWrapper}>
-      <span className={styles.countdownPrefix}>{props.prefix || "Countdown"}</span>
+      <span className={styles.countdownPrefix}>{props.prefix || 'Countdown'}</span>
       <span>{props.divider || ': '}</span>
 
       {
         countdownIsValid(props.startDate || new Date(), props.repeatUntil || props.endDate || new Date()) ?
-          Object.keys(timeLeft).map(key => (
+          Object.keys(timeLeft).map((key) => (
             // check if it's an invalid date / 0 minutes hours etc
-            timeLeft[key] !== -1 && (timeLeft[key] !== 0 || key == 'seconds')
-              ?
+            timeLeft[key] !== -1 && (timeLeft[key] !== 0 || key == 'seconds') ?
               <span className={key} key={key}>
                 <span className={styles.other}>
                   {
-                    key == 'seconds' || key == 'minutes' || key == 'hours'
-                      ? timeLeft[key].toString().padStart(2, 0)
-                      : timeLeft[key]
+                    key == 'seconds' || key == 'minutes' || key == 'hours' ?
+                      timeLeft[key].toString().padStart(2, 0) :
+                      timeLeft[key]
                   }
                 </span>
                 <span className={styles.time}>{suffixesForCountdown[key]}</span>
                 {
                   // custom separator stuff
-                  key !== 'seconds'
-                    ? <span>{props.dateSeparator || ', '}</span>
-                    : <span></span>
+                  key !== 'seconds' ?
+                    <span>{props.dateSeparator || ', '}</span> :
+                    <span></span>
                 }
-              </span>
-              :
+              </span> :
               <span key={key}></span>
-          ))
-          :
+          )) :
           <>
             <span>{props.endMessage || 'The countdown has ended.'}</span>
           </>
@@ -94,6 +97,6 @@ const Countdown = props => {
 
     </div>
   );
-}
+};
 
 export default Countdown;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from "react";
+import React from 'react';
 import Image from 'next/image';
 
 import styles from './nav.module.scss';
@@ -27,4 +27,4 @@ export const Nav = () => {
       </nav>
     </header>
   );
-}
+};
