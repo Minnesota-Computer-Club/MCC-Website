@@ -1,7 +1,7 @@
 import colorStyles from '../schoolColors.module.scss';
 import styles from '../styles.module.scss';
 
-export default function renderSchools({AOC, form, isUserValid, calculateTeamStars}) {
+export default function renderSchools({ AOC, form, isUserValid, calculateTeamStars }) {
   const schools = {}; // obj containing schoolName: obj leaderboard stats
   const teams = {}; // obj containing teamName: array team members
   const aocMembers = Object.values(AOC);
@@ -15,12 +15,12 @@ export default function renderSchools({AOC, form, isUserValid, calculateTeamStar
       ['What is your team name? (Make sure all your team members use the same team name!)']:
                 teamName,
     } = formUser; // grab what school they go to
-    const {stars} = AOCUser; // grab their stars
+    const { stars } = AOCUser; // grab their stars
     if (team == 'Team') {
       teams[teamName] = teams[teamName] || [];
-      teams[teamName].push({...AOCUser, school});
+      teams[teamName].push({ ...AOCUser, school });
     } else {
-      if (!schools[school]) schools[school] = {name: school, stars: 0, players: 0}; // initialize this school if need be
+      if (!schools[school]) schools[school] = { name: school, stars: 0, players: 0 }; // initialize this school if need be
       schools[school].stars += stars;
       schools[school].players += 1;
       schools[school].efficiency = schools[school].stars / schools[school].players;
@@ -31,8 +31,8 @@ export default function renderSchools({AOC, form, isUserValid, calculateTeamStar
     const ratio = 1 / members.length;
     const stars = calculateTeamStars(members);
     // for each school of the team members
-    for (const {school} of members) {
-      if (!schools[school]) schools[school] = {name: school, stars: 0, players: 0}; // initialize this school if need be
+    for (const { school } of members) {
+      if (!schools[school]) schools[school] = { name: school, stars: 0, players: 0 }; // initialize this school if need be
       schools[school].stars += stars * ratio;
       schools[school].players += 1 * ratio;
       schools[school].efficiency = schools[school].stars / schools[school].players;
@@ -57,7 +57,7 @@ export default function renderSchools({AOC, form, isUserValid, calculateTeamStar
             <p className={colorStyles[cssClassName]}>{rank}) </p>
           </td>
           <td>
-            <p className={colorStyles[cssClassName]} style={{textAlign: 'start'}}>
+            <p className={colorStyles[cssClassName]} style={{ textAlign: 'start' }}>
               {school.name}{' '}
             </p>
           </td>

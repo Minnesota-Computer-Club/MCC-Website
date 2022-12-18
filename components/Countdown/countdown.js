@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {intervalToDuration, isWithinInterval, startOfTomorrow} from 'date-fns';
+import React, { useEffect, useState } from 'react';
+import { intervalToDuration, isWithinInterval, startOfTomorrow } from 'date-fns';
 
 import styles from './countdown.module.scss';
 
@@ -33,7 +33,7 @@ const timeBetweenDates = (startDate, endDate, options) => {
   }
 
   try {
-    return (intervalToDuration({start: startDate, end: endDate}));
+    return (intervalToDuration({ start: startDate, end: endDate }));
   } catch {
     return defaultRemainingTime;
   }
@@ -41,7 +41,7 @@ const timeBetweenDates = (startDate, endDate, options) => {
 
 const countdownIsValid = (startDate, endDate) => {
   try {
-    return isWithinInterval(new Date(), {start: startDate || new Date(), end: endDate || new Date()});
+    return isWithinInterval(new Date(), { start: startDate || new Date(), end: endDate || new Date() });
   } catch {
     return false;
   }

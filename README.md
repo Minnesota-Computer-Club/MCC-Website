@@ -47,7 +47,8 @@ This command is going to start a local development server for you to make change
 ### Other Commands to Know
 There are several other commands defined in `package.json` that you should be familiar with:
 - `npm run build`: This command can be run if you want to generate an optimized version of your application for production. Read more at [https://nextjs.org/docs/deployment](https://nextjs.org/docs/deployment).
-- `npm run lint -- --fix`: This magically fixes all the problems you have with bad coding. Uses the [google style guide](https://google.github.io/styleguide/jsguide.html).
+- `npm run lint -- --fix`: This fixes any auto-fixable problems. Uses the [google style guide](https://google.github.io/styleguide/jsguide.html).
+- `npm run lint`: This looks through your code to check for any style guide issues.
 
 ## Contributing
 All contributions are welcome! 

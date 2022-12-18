@@ -1,9 +1,9 @@
 import Others from '../../../components/Leaderboard/others';
-import {readFile} from 'fs/promises';
+import { readFile } from 'fs/promises';
 
-export default function RochesterLeaderboard({AOC, form}) {
+export default function RochesterLeaderboard({ AOC, form }) {
   return <>
-    <Others {...{AOC, form}} />
+    <Others {...{ AOC, form }} />
   </>;
 }
 
@@ -17,12 +17,12 @@ async function fetchLeaderboard(id) {
 }
 
 const leaderboards = [2216296, 641987];
-const cached = {AOC: {}, form: {}};
+const cached = { AOC: {}, form: {} };
 let last;
 
 export async function getServerSideProps() {
   if (last > Date.now()) {
-    return {props: {AOC: cached.AOC, form: cached.form}};
+    return { props: { AOC: cached.AOC, form: cached.form } };
   }
 
   let AOC = {};
@@ -37,17 +37,17 @@ export async function getServerSideProps() {
 
   try {
     // try to grab production file
-    let formData = await readFile('./python/users_mn.json', {encoding: 'utf-8'});
+    let formData = await readFile('./python/users_mn.json', { encoding: 'utf-8' });
     formData = JSON.parse(formData);
     // grab OTHER production file
     let rochFormData = await readFile('./python/users_roch.json');
     rochFormData = JSON.parse(rochFormData);
-    cached.form = {...rochFormData, ...formData};
+    cached.form = { ...rochFormData, ...formData };
   } catch (e) {
     // fall back to dev file
     console.log('falling back on dev file... mn leaderboard');
     try {
-      let formData = await readFile('./devUsers.json', {encoding: 'utf-8'});
+      let formData = await readFile('./devUsers.json', { encoding: 'utf-8' });
       formData = JSON.parse(formData);
       cached.form = formData;
     } catch (e) {
@@ -60,5 +60,5 @@ export async function getServerSideProps() {
   last = Date.now() + 15 * 60 * 1000;
   // 15 mins > 60 seconds in a min > 1000 ms in a second
 
-  return {props: {AOC: cached.AOC, form: cached.form}};
+  return { props: { AOC: cached.AOC, form: cached.form } };
 }

@@ -2,7 +2,7 @@ import coloredStyles from '../schoolColors.module.scss';
 import lbStyles from '../leaderboard.module.scss';
 import styles from '../styles.module.scss';
 
-export default function IndividualLeaderboard({AOC, form, generateStars, isUserValid, regenLocalScores}) {
+export default function IndividualLeaderboard({ AOC, form, generateStars, isUserValid, regenLocalScores }) {
   const tableRows = []; // array of table rows with info
   let aocMembers = Object.values(AOC); // Convert AOC.members obj into array
   aocMembers = regenLocalScores(aocMembers);
@@ -19,7 +19,7 @@ export default function IndividualLeaderboard({AOC, form, generateStars, isUserV
       ['Are you participating as part of a team or as an individual?']: team,
     } = formUser;
     if (team == 'Team') continue; // if the user is a team we aren't going to render them on the scoreboard
-    const {local_score: score, stars} = AOCUser; // deconstruct aoc data
+    const { local_score: score, stars } = AOCUser; // deconstruct aoc data
 
     const rank = tableRows.length + 1; // user's leaderboard ranking
     tableRows.push(
@@ -36,7 +36,7 @@ export default function IndividualLeaderboard({AOC, form, generateStars, isUserV
                         ' ' +
                         (stars % 2 == 0 ? lbStyles.goldStars : lbStyles.silverStar)
             }
-            style={{textAlign: 'start'}}
+            style={{ textAlign: 'start' }}
           >
             {stars}★{' '}
           </td>

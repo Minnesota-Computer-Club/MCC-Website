@@ -1,3 +1,9 @@
 {
-  "extends": ["next/core-web-vitals"]
+  "extends": ["next/core-web-vitals", "google"],
+  "rules": {
+    "require-jsdoc": 0,
+    "max-len": 0,
+    "object-curly-spacing": ["error", "always"],
+    "camelcase": 0
+  }
 }

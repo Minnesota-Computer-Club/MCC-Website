@@ -3,7 +3,7 @@ function userInLb(user, aocMembers) {
   return aocMembers.findIndex((x) => x.name == user) != -1;
 }
 
-export function NoLb({AOC, form, regenLocalScores}) {
+export function NoLb({ AOC, form, regenLocalScores }) {
   const li = []; // array of table rows with info
   let aocMembers = Object.values(AOC); // Convert AOC.members obj into array
   aocMembers = regenLocalScores(aocMembers); // map

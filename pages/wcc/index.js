@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import {Nav} from '../../components/landingPage/Nav/nav';
+import { Nav } from '../../components/landingPage/Nav/nav';
 
-import {Sponsors} from '../../components/Sponsors/Sponsors';
+import { Sponsors } from '../../components/Sponsors/Sponsors';
 import styles from './wwc.module.scss';
 import Link from 'next/link';
 
@@ -51,7 +51,7 @@ export default function WCC() {
                     Top three places in each of the following categories (with at least 10 entires){' '}
           <b>will earn a prize</b>
         </p>
-        <ul style={{alignSelf: 'flex-start'}}>
+        <ul style={{ alignSelf: 'flex-start' }}>
           <li>
             <p>High school students</p>
           </li>
@@ -66,7 +66,7 @@ export default function WCC() {
           </li>
         </ul>
         <p>Prizes for high school students are as follows.</p>
-        <ul style={{alignSelf: 'flex-start'}} dir="ltr">
+        <ul style={{ alignSelf: 'flex-start' }} dir="ltr">
           <li>
             <p>The top individual will win a $100 cash prize.</p>
           </li>

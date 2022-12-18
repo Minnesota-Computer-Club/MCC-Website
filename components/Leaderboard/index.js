@@ -5,12 +5,12 @@ import styles from './leaderboard.module.scss';
 import IndividualLeaderboard from './individuals';
 import TeamLeaderboard from './teams';
 import SchoolLeaderboard from './schools';
-import {Nav} from '../landingPage/Nav/nav';
+import { Nav } from '../landingPage/Nav/nav';
 import Countdown from '../Countdown/countdown';
 
 // import moment from "moment";
 import moment from 'moment-timezone';
-import {fromUnixTime} from 'date-fns';
+import { fromUnixTime } from 'date-fns';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -37,7 +37,7 @@ function getPuzzleDate() {
   return date;
 }
 
-export default function Leaderboard({AOC, form, location}) {
+export default function Leaderboard({ AOC, form, location }) {
   const totalUsers = Object.keys(AOC).length;
   const totalStars = Object.keys(AOC).reduce((prev, key) => prev + AOC[key].stars, 0);
   const avgStars = Math.round((totalStars / totalUsers) * 100) / 100;
@@ -70,7 +70,7 @@ export default function Leaderboard({AOC, form, location}) {
   function isUserValid(aocUser) {
     const formUser = form[aocUser.name];
     if (!formUser) return false; // user is not in the form
-    const {stars} = aocUser;
+    const { stars } = aocUser;
     if (stars == 0) return false; // if the user is not apart of a team and they dont have stars dont count them
     return true;
   }
@@ -125,7 +125,7 @@ export default function Leaderboard({AOC, form, location}) {
     );
 
     return users.map((u) =>
-            new_localscores.has(u.name) ? {...u, local_score: new_localscores.get(u.name)} : u
+            new_localscores.has(u.name) ? { ...u, local_score: new_localscores.get(u.name) } : u
     );
   }
 
@@ -135,7 +135,7 @@ export default function Leaderboard({AOC, form, location}) {
   function calculateTeamStars(teamMembers) {
     const counted = {};
     let stars = 0;
-    for (const {completion_day_level} of teamMembers) {
+    for (const { completion_day_level } of teamMembers) {
       for (const day of Object.keys(completion_day_level)) {
         for (const puzzle of Object.keys(completion_day_level[day])) {
           if (counted[day] && counted[day][puzzle]) continue; // this star has already been counted
@@ -171,17 +171,17 @@ export default function Leaderboard({AOC, form, location}) {
 
       <Nav />
 
-            <div className={styles.leaderboard}>
-                <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
-                <div className={styles.section + " " + styles.stats}>
-                    <h2>Statistics</h2>
-                    <div className={styles.countdownRowWrapper}>
-                        <Countdown
-                            prefix="Next Puzzle Unlocks In"
-                            endDate={getPuzzleDate()}
-                            repeatUntil={fromUnixTime(1671948001)}
-                            endMessage="Advent of Code 2022 has ended."
-                        />
+      <div className={styles.leaderboard}>
+        <h1 onClick={titleEasterEgg}>{location} Leaderboard</h1>
+        <div className={styles.section + ' ' + styles.stats}>
+          <h2>Statistics</h2>
+          <div className={styles.countdownRowWrapper}>
+            <Countdown
+              prefix="Next Puzzle Unlocks In"
+              endDate={getPuzzleDate()}
+              repeatUntil={fromUnixTime(1671948001)}
+              endMessage="Advent of Code 2022 has ended."
+            />
 
             <Countdown
               prefix="Competition Ends In"
@@ -202,7 +202,7 @@ export default function Leaderboard({AOC, form, location}) {
 
             <div>
               <span className={styles.boldShadow}>Total Users:&nbsp;</span>
-              <span style={{color: 'rgb(117, 193, 255)'}}>{totalUsers}</span>
+              <span style={{ color: 'rgb(117, 193, 255)' }}>{totalUsers}</span>
             </div>
           </div>
         </div>
@@ -250,7 +250,7 @@ export default function Leaderboard({AOC, form, location}) {
             <table>
               <tbody>
                 <IndividualLeaderboard
-                  {...{AOC, form, generateStars, isUserValid, regenLocalScores}}
+                  {...{ AOC, form, generateStars, isUserValid, regenLocalScores }}
                 />
               </tbody>
             </table>
