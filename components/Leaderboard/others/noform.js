@@ -2,14 +2,14 @@ import lbStyles from '../leaderboard.module.scss';
 import styles from '../styles.module.scss';
 
 // people in the LEADERBOARD but not in the FORM
-export function NoForm({ AOC, form: _, generateStars, isUserValid, regenLocalScores }) {
+export function NoForm({ AOC, form, generateStars, isUserValid, regenLocalScores }) {
   const tableRows = []; // array of table rows with info
   let aocMembers = Object.values(AOC); // Convert AOC.members obj into array
   aocMembers = regenLocalScores(aocMembers);
   aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); // sort by stars & score
 
   for (const AOCUser of aocMembers) {
-    if (isUserValid(AOCUser)) continue;
+    if (isUserValid(form, AOCUser)) continue;
 
     const { local_score: score, stars, name } = AOCUser; // deconstruct aoc data
 

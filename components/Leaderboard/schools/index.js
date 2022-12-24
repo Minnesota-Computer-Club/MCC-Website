@@ -7,7 +7,7 @@ export default function renderSchools({ AOC, form, isUserValid, calculateTeamSta
   const aocMembers = Object.values(AOC);
   aocMembers.sort((a, b) => b.stars - a.stars || b.local_score - a.local_score); // sort by stars & score
   for (const AOCUser of aocMembers) {
-    if (!isUserValid(AOCUser)) continue;
+    if (!isUserValid(form, AOCUser)) continue;
     const formUser = form[AOCUser.name]; // grab the aoc user's form submission
     const {
       ['Which school do you attend?']: school,

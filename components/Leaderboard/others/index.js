@@ -4,6 +4,7 @@ import { Nav } from '../../landingPage/Nav/nav';
 import { NoForm } from './noform';
 import { NoLb } from './nolb';
 import Link from 'next/link';
+import { isUserValid } from '../utils';
 
 const MAX_STARS = 25;
 const STAR = '★';
@@ -24,18 +25,6 @@ export default function Leaderboard({ AOC, form }) {
         <p className={styles.incompleteStars}>{STAR.repeat(incompleteStars) + ' '}</p>
       </div>
     );
-  }
-
-  /*
-    Should this user be render & counted in stats?
-    */
-
-  function isUserValid(aocUser) {
-    const formUser = form[aocUser.name];
-    if (!formUser) return false; // user is not in the form
-    const { stars } = aocUser;
-    if (stars == 0) return false; // if the user is not apart of a team and they dont have stars dont count them
-    return true;
   }
 
   /*
