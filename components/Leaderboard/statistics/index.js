@@ -17,14 +17,7 @@ function getPuzzleDate() {
 }
 
 export default function renderStatistics({ AOC, STAR, isUserValid }) {
-  console.log(AOC);
   const aocArr = Object.values(AOC).filter((aocUser) => isUserValid(aocUser));
-  console.log(aocArr.length);
-  for (const aocUser of aocArr) {
-    if (!isUserValid(aocUser)) console.log('found one!');
-  }
-  aocArr;
-  console.log(aocArr.length);
   const totalUsers = aocArr.length;
   const totalStars = aocArr.reduce((prev, aocUser) => prev + aocUser.stars, 0);
   const avgStars = Math.round((totalStars / totalUsers) * 100) / 100;
