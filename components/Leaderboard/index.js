@@ -7,6 +7,7 @@ import TeamLeaderboard from './teams';
 import SchoolLeaderboard from './schools';
 import { Nav } from '../landingPage/Nav/nav';
 import Countdown from '../Countdown/countdown';
+import { isUserValid } from './utils';
 
 // import moment from "moment";
 import moment from 'moment-timezone';
@@ -62,17 +63,6 @@ export default function Leaderboard({ AOC, form, location }) {
         <p className={styles.incompleteStars}>{STAR.repeat(incompleteStars) + ' '}</p>
       </div>
     );
-  }
-
-  /*
-    Should this user be render & counted in stats?
-    */
-  function isUserValid(aocUser) {
-    const formUser = form[aocUser.name];
-    if (!formUser) return false; // user is not in the form
-    const { stars } = aocUser;
-    if (stars == 0) return false; // if the user is not apart of a team and they dont have stars dont count them
-    return true;
   }
 
   /*
