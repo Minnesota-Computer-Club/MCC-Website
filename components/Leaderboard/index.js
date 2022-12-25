@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import styles from './leaderboard.module.scss';
+
 import IndividualLeaderboard from './individuals';
 import TeamLeaderboard from './teams';
 import SchoolLeaderboard from './schools';
@@ -14,6 +15,7 @@ import { fromUnixTime } from 'date-fns';
 
 const MAX_STARS = 25;
 const STAR = '★';
+
 const SCHOOLTOCOLOR = {
   mayo: '1a743a',
   jm: 'cb2026',
