@@ -15,7 +15,7 @@ export default function WCC() {
       </Head>
       <Nav />
       <div className={styles.wcc}>
-        <h1>Rochester Computer Club Winter <a title="Anyone who subscribes gets +1 star on their advent of code!" href='https://youtube.com/@Coder100' target="_blank" rel="noreferrer">Coding</a> Competition</h1>
+        <h1>Rochester Computer Club Winter Coding Competition</h1>
         <h2><Link href="/rochester/wcc/leaderboard">View the leaderboard</Link></h2>
         <p>
                     Every December, the Rochester Computer Club hosts a programming competition for
