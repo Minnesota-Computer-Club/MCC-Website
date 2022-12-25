@@ -28,7 +28,7 @@ export default function renderStatistics({ AOC, STAR, isUserValid }) {
       <Countdown
         prefix="Next Puzzle Unlocks In"
         endDate={getPuzzleDate()}
-        repeatUntil={fromUnixTime(1671948001)}
+        repeatUntil={fromUnixTime(1672552801)}
         endMessage="Advent of Code 2022 has ended."
       />
 
