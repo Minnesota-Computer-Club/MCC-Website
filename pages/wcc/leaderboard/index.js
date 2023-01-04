@@ -10,7 +10,7 @@ export default function RochesterLeaderboard({ AOC, form }) {
 async function fetchLeaderboard(id) {
   const req = await fetch(`https://adventofcode.com/2022/leaderboard/private/view/${id}.json`, {
     headers: {
-      cookie: 'session=53616c7465645f5fe0bf9819378fb124702a5bed2ebf04b4cd64100945d041c919b74e0203f262ac15a5a85ea35664bc6f7f93f0c18ed8ab53f822a278ee0b9c',
+      cookie: 'session=53616c7465645f5f6ada3bbcc057af75e3f3cb61ca81f9fc405651e34e3e130cff477b7a6aab1ec9d7ae198fdd8fe30d725a3a2c55bb3370c8b9ef9e20898b0d',
     },
   });
   return await req.json();
