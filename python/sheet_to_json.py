@@ -79,23 +79,22 @@ def main():
         
     # User login to generate tokens
     # if not creds or not creds.valid:
-    #     if creds and creds.expired and creds.refresh_token:
-    #         creds.refresh(Request())
-    #     else:
-    #         flow = InstalledAppFlow.from_client_secrets_file(
-    #             'credentials.json', SCOPES)
-    #         creds = flow.run_local_server(port=0)
+    #     flow = InstalledAppFlow.from_client_secrets_file(
+    #         'credentials.json', SCOPES)
+    #     creds = flow.run_local_server(port=0)
     #     # Save the credentials for the next run
     #     with open(TOKENPATH, 'w') as token:
     #         token.write(creds.to_json())
     
-    if not creds or not creds.valid:
+    if not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             print("Error, token irrepairable")
             exit(1)
-
+        with open(TOKENPATH, 'w') as token:
+            token.write(creds.to_json())
+    
     ######### API CALLS
     service = build('sheets', 'v4', credentials=creds)
     
