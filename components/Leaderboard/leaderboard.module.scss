@@ -13,7 +13,7 @@
 
     .stats {
         h2 {
-            color: #7060A9;
+            color: #7060a9;
         }
 
         background: rgb(0, 0, 0, 0.3);
@@ -27,7 +27,6 @@
         }
     }
 
-    
     @media screen and (max-width: 600px) {
         .stats {
             width: 100%;
@@ -43,15 +42,13 @@
         margin: 16px 0;
         white-space: pre;
 
-        >h2 {
+        > h2 {
             font-size: 1em;
             font-weight: bolder;
             margin: 8px 0;
         }
 
         .countdownRowWrapper {
-            text-align: start;
-
             div {
                 @media screen and (max-width: 600px) {
                     .countdownWrapper {
@@ -61,11 +58,15 @@
             }
         }
 
-        >div {
-            text-align: end;
+        > div {
+            > table {
+                text-align: end;
+            }
+
+            display: flex;
+            flex-direction: column;
         }
     }
-
 
     .stars {
         text-align: center;
@@ -92,7 +93,7 @@
         border-collapse: collapse;
 
         tr {
-            >td {
+            > td {
                 padding: 2px;
             }
 
@@ -141,7 +142,7 @@
 }
 
 .btn {
-    $p: #7060A9;
+    $p: #7060a9;
 
     .findOutSmall {
         background: $p;
